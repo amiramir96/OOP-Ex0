@@ -1,0 +1,1670 @@
+**** The Simulator log: stage 2
+0.0,OOP_Ex0_Elevator_Simulator
+0.0,Simulated Building, ex0.simulator.Builging_A [-2,10]
+0) ex0.simulator.Elevator_A, Elev_0, speed: 1.0, open/close: 2.0,  start/stop: 3.0
+1) ex0.simulator.Elevator_A, Elev_1, speed: 1.0, open/close: 2.0,  start/stop: 3.0
+0.0,Simulated Period starTime,0.0,  endTime,1000.0,  dt,1.0
+0.0,Simulated  calls,Elevetor log, size: 100
+0.0,**** Simulation starts!! ****
+5.0,Elevator call,4.374727290393253,0,-1,1,0, got allocated to elevator, 0
+5.0, elevID,0,  pos,-2,  cmd, goto,0
+, elevID,0,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+17.0,Elevator call,16.957882888088932,-1,0,1,0, got allocated to elevator, 0
+17.0,Elev,0,  arrived at src, 0, Elevator call,4.374727290393253,0,-1,2,0
+17.0, elevID,0,  pos,0,  cmd, goto,-1
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+23.0,Elevator call,22.094056301593582,0,-1,1,1, got allocated to elevator, 1
+23.0, elevID,1,  pos,-2,  cmd, goto,0
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+28.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,4.374727290393253,0,-1,3,0, Done, dt, 23.625272709606747
+28.0,Elev,0,  arrived at src, -1, Elevator call,16.957882888088932,-1,0,2,0
+28.0, elevID,0,  pos,-1,  cmd, goto,0
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+35.0,Elev,1,  arrived at src, 0, Elevator call,22.094056301593582,0,-1,2,1
+35.0, elevID,1,  pos,0,  cmd, goto,-1
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+39.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,16.957882888088932,-1,0,3,0, Done, dt, 22.042117111911068
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+46.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,22.094056301593582,0,-1,3,1, Done, dt, 23.905943698406418
+86.0,Elevator call,85.5209666204754,3,2,1,0, got allocated to elevator, 0
+86.0, elevID,0,  pos,0,  cmd, goto,3
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+92.0,Elevator call,91.21019413453945,-1,-2,1,1, got allocated to elevator, 1
+, elevID,0,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+92.0,Elev,1,  arrived at src, -1, Elevator call,91.21019413453945,-1,-2,2,1
+92.0, elevID,1,  pos,-1,  cmd, goto,-2
+, elevID,0,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+99.0,Elev,0,  arrived at src, 3, Elevator call,85.5209666204754,3,2,2,0
+99.0, elevID,0,  pos,3,  cmd, goto,2
+, elevID,0,  pos,3,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,2,  the elevator is not moving!
+103.0,Elev,1,  arrived at dest, -2, this call is done!, Elevator call,91.21019413453945,-1,-2,3,1, Done, dt, 11.78980586546055
+, elevID,0,  pos,3,  WRONG cmd, stop,2,  the elevator is not moving!
+105.0,Elevator call,104.13701241869234,0,4,1,1, got allocated to elevator, 1
+105.0, elevID,1,  pos,-2,  cmd, goto,0
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+110.0,Elevator call,109.21352909346587,-1,0,1,1, got allocated to elevator, 1
+110.0,Elev,0,  arrived at dest, 2, this call is done!, Elevator call,85.5209666204754,3,2,3,0, Done, dt, 24.479033379524594
+110.0, elevID,1,  pos,-2,  cmd, stop,-1
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+115.0,Elevator call,114.39235096774041,3,0,1,0, got allocated to elevator, 0
+115.0, elevID,0,  pos,2,  cmd, goto,3
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+116.0,Elev,1,  arrived at src, -1, Elevator call,109.21352909346587,-1,0,2,1
+116.0, elevID,1,  pos,-1,  cmd, goto,0
+, elevID,0,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+125.0,Elevator call,124.42557095980362,0,9,1,1, got allocated to elevator, 1
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+126.0,Elev,0,  arrived at src, 3, Elevator call,114.39235096774041,3,0,2,0
+126.0, elevID,0,  pos,3,  cmd, goto,0
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+127.0,Elev,1,  arrived at src, 0, Elevator call,104.13701241869234,0,4,2,1
+127.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,109.21352909346587,-1,0,3,1, Done, dt, 17.786470906534134
+127.0,Elev,1,  arrived at src, 0, Elevator call,124.42557095980362,0,9,2,1
+127.0, elevID,1,  pos,0,  cmd, goto,4
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+131.0,Elevator call,130.02495678190564,8,10,1,1, got allocated to elevator, 1
+131.0,Elevator call,130.224911275492,-1,1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+138.0,Elevator call,137.9515274326701,0,4,1,1, got allocated to elevator, 1
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+139.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,114.39235096774041,3,0,3,0, Done, dt, 24.607649032259587
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+141.0,Elev,1,  arrived at dest, 4, this call is done!, Elevator call,104.13701241869234,0,4,3,1, Done, dt, 36.862987581307664
+141.0, elevID,1,  pos,4,  cmd, goto,8
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+144.0,Elevator call,143.91335838799415,0,6,1,0, got allocated to elevator, 0
+144.0,Elev,0,  arrived at src, 0, Elevator call,143.91335838799415,0,6,2,0
+144.0, elevID,0,  pos,0,  cmd, goto,6
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+155.0,Elev,1,  arrived at src, 8, Elevator call,130.02495678190564,8,10,2,1
+155.0, elevID,1,  pos,8,  cmd, goto,10
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+160.0,Elev,0,  arrived at dest, 6, this call is done!, Elevator call,143.91335838799415,0,6,3,0, Done, dt, 16.08664161200585
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+167.0,Elev,1,  arrived at dest, 10, this call is done!, Elevator call,130.02495678190564,8,10,3,1, Done, dt, 36.975043218094356
+167.0, elevID,1,  pos,10,  cmd, goto,9
+, elevID,1,  pos,10,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,9,  the elevator is not moving!
+170.0,Elevator call,169.78458339380109,-1,0,1,0, got allocated to elevator, 0
+170.0, elevID,0,  pos,6,  cmd, goto,-1
+, elevID,1,  pos,10,  WRONG cmd, stop,9,  the elevator is not moving!
+171.0,Elevator call,170.0099620835246,0,6,1,0, got allocated to elevator, 0
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,9,  the elevator is not moving!
+172.0,Elevator call,171.21173315221364,-1,8,1,0, got allocated to elevator, 0
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+175.0,Elevator call,174.84385152106802,0,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,6,  cmd, stop,0
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+178.0,Elev,1,  arrived at dest, 9, this call is done!, Elevator call,124.42557095980362,0,9,3,1, Done, dt, 53.57442904019638
+178.0, elevID,1,  pos,9,  cmd, goto,-1
+, elevID,0,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+186.0,Elev,0,  arrived at src, 0, Elevator call,170.0099620835246,0,6,2,0
+186.0,Elev,0,  arrived at src, 0, Elevator call,174.84385152106802,0,-1,2,0
+186.0, elevID,0,  pos,0,  cmd, goto,-1
+, elevID,1,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+188.0,Elevator call,187.11678617348463,-1,-2,1,1, got allocated to elevator, 1
+188.0,Elevator call,187.7299317966884,-1,-2,1,1, got allocated to elevator, 1
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+196.0,Elevator call,195.90869649656992,0,7,1,0, got allocated to elevator, 0
+197.0,Elev,0,  arrived at src, -1, Elevator call,169.78458339380109,-1,0,2,0
+197.0,Elev,0,  arrived at src, -1, Elevator call,171.21173315221364,-1,8,2,0
+197.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,174.84385152106802,0,-1,3,0, Done, dt, 22.156148478931982
+197.0, elevID,0,  pos,-1,  cmd, goto,0
+198.0,Elevator call,197.5359191292572,-1,1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+198.0,Elev,1,  arrived at src, -1, Elevator call,130.224911275492,-1,1,2,1
+198.0,Elev,1,  arrived at src, -1, Elevator call,187.11678617348463,-1,-2,2,1
+198.0,Elev,1,  arrived at src, -1, Elevator call,187.7299317966884,-1,-2,2,1
+198.0, elevID,1,  pos,-1,  cmd, goto,1
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+206.0,Elevator call,205.9895199338651,-1,0,1,0, got allocated to elevator, 0
+208.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,169.78458339380109,-1,0,3,0, Done, dt, 38.215416606198914
+208.0,Elev,0,  arrived at src, 0, Elevator call,195.90869649656992,0,7,2,0
+208.0, elevID,0,  pos,0,  cmd, goto,-1
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+210.0,Elev,1,  arrived at dest, 1, this call is done!, Elevator call,130.224911275492,-1,1,3,1, Done, dt, 79.77508872450801
+210.0, elevID,1,  pos,1,  cmd, goto,-2
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+219.0,Elev,0,  arrived at src, -1, Elevator call,197.5359191292572,-1,1,2,0
+219.0,Elev,0,  arrived at src, -1, Elevator call,205.9895199338651,-1,0,2,0
+219.0, elevID,0,  pos,-1,  cmd, goto,6
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+223.0,Elev,1,  arrived at dest, -2, this call is done!, Elevator call,187.11678617348463,-1,-2,3,1, Done, dt, 35.88321382651537
+223.0,Elev,1,  arrived at dest, -2, this call is done!, Elevator call,187.7299317966884,-1,-2,3,1, Done, dt, 35.27006820331161
+223.0, elevID,1,  pos,-2,  cmd, goto,0
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+228.0,Elevator call,227.0798304557929,-1,5,1,1, got allocated to elevator, 1
+, elevID,0,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+228.0, elevID,1,  pos,-2,  cmd, stop,-1
+, elevID,0,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+232.0,Elevator call,231.51578817426258,-1,0,1,1, got allocated to elevator, 1
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+233.0,Elevator call,232.95043623946805,0,-1,1,0, got allocated to elevator, 0
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+234.0,Elev,1,  arrived at src, -1, Elevator call,227.0798304557929,-1,5,2,1
+234.0,Elev,1,  arrived at src, -1, Elevator call,231.51578817426258,-1,0,2,1
+234.0, elevID,1,  pos,-1,  cmd, goto,5
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+236.0,Elev,0,  arrived at dest, 6, this call is done!, Elevator call,170.0099620835246,0,6,3,0, Done, dt, 65.99003791647539
+236.0, elevID,0,  pos,6,  cmd, goto,-1
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+250.0,Elev,1,  arrived at dest, 5, this call is done!, Elevator call,227.0798304557929,-1,5,3,1, Done, dt, 22.920169544207113
+250.0, elevID,1,  pos,5,  cmd, goto,0
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+252.0,Elevator call,251.10444690749756,-1,-2,1,1, got allocated to elevator, 1
+252.0,Elevator call,251.23593354161653,0,9,1,0, got allocated to elevator, 0
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+253.0, elevID,0,  pos,-1,  cmd, goto,0
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+255.0,Elevator call,254.69771525200505,3,4,1,0, got allocated to elevator, 0
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+258.0,Elevator call,257.7974435335086,-1,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+264.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,205.9895199338651,-1,0,3,0, Done, dt, 58.0104800661349
+264.0,Elev,0,  arrived at src, 0, Elevator call,232.95043623946805,0,-1,2,0
+264.0,Elev,0,  arrived at src, 0, Elevator call,251.23593354161653,0,9,2,0
+264.0, elevID,0,  pos,0,  cmd, goto,3
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+265.0,Elev,1,  arrived at src, 0, Elevator call,137.9515274326701,0,4,2,1
+265.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,231.51578817426258,-1,0,3,1, Done, dt, 33.48421182573742
+265.0, elevID,1,  pos,0,  cmd, goto,4
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+277.0,Elev,0,  arrived at src, 3, Elevator call,254.69771525200505,3,4,2,0
+277.0, elevID,0,  pos,3,  cmd, goto,4
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+279.0,Elev,1,  arrived at dest, 4, this call is done!, Elevator call,137.9515274326701,0,4,3,1, Done, dt, 141.0484725673299
+279.0, elevID,1,  pos,4,  cmd, goto,-1
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+288.0,Elev,0,  arrived at dest, 4, this call is done!, Elevator call,254.69771525200505,3,4,3,0, Done, dt, 33.302284747994946
+288.0, elevID,0,  pos,4,  cmd, goto,-1
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+294.0,Elev,1,  arrived at src, -1, Elevator call,251.10444690749756,-1,-2,2,1
+294.0, elevID,1,  pos,-1,  cmd, goto,-2
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+296.0,Elevator call,295.7943356681491,0,1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+303.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,232.95043623946805,0,-1,3,0, Done, dt, 70.04956376053195
+303.0,Elev,0,  arrived at src, -1, Elevator call,257.7974435335086,-1,0,2,0
+303.0, elevID,0,  pos,-1,  cmd, goto,1
+, elevID,0,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+305.0,Elevator call,304.99843880775313,6,0,1,1, got allocated to elevator, 1
+, elevID,0,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+305.0,Elev,1,  arrived at dest, -2, this call is done!, Elevator call,251.10444690749756,-1,-2,3,1, Done, dt, 53.89555309250244
+305.0, elevID,1,  pos,-2,  cmd, goto,6
+, elevID,0,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,6,  the elevator is not moving!
+310.0,Elevator call,309.30053828560517,0,-1,1,0, got allocated to elevator, 0
+, elevID,1,  pos,-2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+313.0,Elevator call,312.30185564398687,0,-1,1,0, got allocated to elevator, 0
+, elevID,1,  pos,1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,6,  the elevator is not moving!
+315.0,Elev,0,  arrived at dest, 1, this call is done!, Elevator call,197.5359191292572,-1,1,3,0, Done, dt, 117.4640808707428
+315.0, elevID,0,  pos,1,  cmd, goto,0
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+317.0,Elevator call,316.03237827404377,0,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+320.0,Elevator call,319.90520204415634,6,5,1,0, got allocated to elevator, 0
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+321.0,Elevator call,320.97607492210807,-1,0,1,1, got allocated to elevator, 1
+322.0,Elevator call,321.37040904796595,7,-1,1,0, got allocated to elevator, 0
+323.0,Elev,1,  arrived at src, 6, Elevator call,304.99843880775313,6,0,2,1
+323.0, elevID,1,  pos,6,  cmd, goto,0
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+326.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,257.7974435335086,-1,0,3,0, Done, dt, 68.20255646649139
+326.0,Elev,0,  arrived at src, 0, Elevator call,295.7943356681491,0,1,2,0
+326.0,Elev,0,  arrived at src, 0, Elevator call,309.30053828560517,0,-1,2,0
+326.0,Elev,0,  arrived at src, 0, Elevator call,312.30185564398687,0,-1,2,0
+326.0,Elev,0,  arrived at src, 0, Elevator call,316.03237827404377,0,-1,2,0
+326.0, elevID,0,  pos,0,  cmd, goto,1
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+333.0,Elevator call,332.4267319393355,0,10,1,0, got allocated to elevator, 0
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+337.0,Elevator call,336.93043046159545,-1,0,1,0, got allocated to elevator, 0
+337.0,Elev,0,  arrived at dest, 1, this call is done!, Elevator call,295.7943356681491,0,1,3,0, Done, dt, 41.205664331850926
+337.0, elevID,0,  pos,1,  cmd, goto,-1
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+339.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,304.99843880775313,6,0,3,1, Done, dt, 34.00156119224687
+339.0, elevID,1,  pos,0,  cmd, goto,-1
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+349.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,309.30053828560517,0,-1,3,0, Done, dt, 39.69946171439483
+349.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,312.30185564398687,0,-1,3,0, Done, dt, 36.69814435601313
+349.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,316.03237827404377,0,-1,3,0, Done, dt, 32.967621725956235
+349.0,Elev,0,  arrived at src, -1, Elevator call,336.93043046159545,-1,0,2,0
+349.0, elevID,0,  pos,-1,  cmd, goto,8
+, elevID,0,  pos,-1,  WRONG cmd, stop,8,  the elevator is not moving!
+350.0,Elev,1,  arrived at src, -1, Elevator call,320.97607492210807,-1,0,2,1
+350.0, elevID,1,  pos,-1,  cmd, goto,0
+, elevID,0,  pos,-1,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,8,  the elevator is not moving!
+361.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,320.97607492210807,-1,0,3,1, Done, dt, 40.02392507789193
+, elevID,0,  pos,7,  WRONG cmd, stop,8,  the elevator is not moving!
+368.0,Elev,0,  arrived at dest, 8, this call is done!, Elevator call,171.21173315221364,-1,8,3,0, Done, dt, 196.78826684778636
+368.0, elevID,0,  pos,8,  cmd, goto,0
+, elevID,0,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+376.0,Elevator call,375.49048095381363,1,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,5,  cmd, stop,1
+, elevID,0,  pos,4,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+385.0,Elev,0,  arrived at src, 1, Elevator call,375.49048095381363,1,0,2,0
+385.0, elevID,0,  pos,1,  cmd, goto,0
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+393.0,Elevator call,392.5160764870397,0,5,1,1, got allocated to elevator, 1
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+393.0,Elev,1,  arrived at src, 0, Elevator call,392.5160764870397,0,5,2,1
+393.0, elevID,1,  pos,0,  cmd, goto,5
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+396.0,Elev,0,  arrived at src, 0, Elevator call,332.4267319393355,0,10,2,0
+396.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,336.93043046159545,-1,0,3,0, Done, dt, 59.06956953840455
+396.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,375.49048095381363,1,0,3,0, Done, dt, 20.50951904618637
+396.0, elevID,0,  pos,0,  cmd, goto,-1
+, elevID,1,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,5,  the elevator is not moving!
+406.0,Elevator call,405.1821140884023,-1,10,1,1, got allocated to elevator, 1
+407.0, elevID,0,  pos,-1,  cmd, goto,0
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+408.0,Elev,1,  arrived at dest, 5, this call is done!, Elevator call,392.5160764870397,0,5,3,1, Done, dt, 15.483923512960303
+408.0, elevID,1,  pos,5,  cmd, goto,-1
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+418.0, elevID,0,  pos,0,  cmd, goto,7
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,7,  the elevator is not moving!
+424.0,Elev,1,  arrived at src, -1, Elevator call,405.1821140884023,-1,10,2,1
+424.0, elevID,1,  pos,-1,  cmd, goto,10
+, elevID,0,  pos,2,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,10,  the elevator is not moving!
+427.0,Elevator call,426.8615805478589,2,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,4,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,10,  the elevator is not moving!
+435.0,Elev,0,  arrived at dest, 7, this call is done!, Elevator call,195.90869649656992,0,7,3,0, Done, dt, 239.09130350343008
+435.0,Elev,0,  arrived at src, 7, Elevator call,321.37040904796595,7,-1,2,0
+435.0, elevID,0,  pos,7,  cmd, goto,9
+, elevID,1,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+438.0,Elevator call,437.17111576125836,1,0,1,1, got allocated to elevator, 1
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,9,  the elevator is not moving!
+445.0,Elev,1,  arrived at dest, 10, this call is done!, Elevator call,405.1821140884023,-1,10,3,1, Done, dt, 39.81788591159773
+445.0, elevID,1,  pos,10,  cmd, goto,1
+, elevID,1,  pos,10,  WRONG cmd, stop,1,  the elevator is not moving!
+447.0,Elev,0,  arrived at dest, 9, this call is done!, Elevator call,251.23593354161653,0,9,3,0, Done, dt, 195.76406645838347
+447.0, elevID,0,  pos,9,  cmd, goto,-1
+, elevID,1,  pos,10,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+464.0,Elev,1,  arrived at src, 1, Elevator call,437.17111576125836,1,0,2,1
+464.0, elevID,1,  pos,1,  cmd, goto,0
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+467.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,321.37040904796595,7,-1,3,0, Done, dt, 145.62959095203405
+467.0, elevID,0,  pos,-1,  cmd, goto,0
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+473.0,Elevator call,472.7445473930129,10,-1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+475.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,437.17111576125836,1,0,3,1, Done, dt, 37.82888423874164
+475.0, elevID,1,  pos,0,  cmd, goto,10
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+478.0, elevID,0,  pos,0,  cmd, goto,2
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+490.0,Elev,0,  arrived at src, 2, Elevator call,426.8615805478589,2,0,2,0
+490.0, elevID,0,  pos,2,  cmd, goto,-1
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+495.0,Elev,1,  arrived at src, 10, Elevator call,472.7445473930129,10,-1,2,1
+495.0, elevID,1,  pos,10,  cmd, goto,-1
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+501.0,Elevator call,500.3712044996745,8,-1,1,1, got allocated to elevator, 1
+, elevID,1,  pos,9,  cmd, stop,8
+, elevID,1,  pos,8,  WRONG cmd, stop,-1,  the elevator is not moving!
+503.0, elevID,0,  pos,-1,  cmd, goto,6
+, elevID,1,  pos,8,  WRONG cmd, stop,-1,  the elevator is not moving!
+504.0,Elevator call,503.13847841893045,1,-1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+505.0,Elevator call,504.4317942159655,0,-1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+507.0,Elev,1,  arrived at src, 8, Elevator call,500.3712044996745,8,-1,2,1
+507.0, elevID,1,  pos,8,  cmd, goto,1
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+520.0,Elev,0,  arrived at src, 6, Elevator call,319.90520204415634,6,5,2,0
+520.0, elevID,0,  pos,6,  cmd, goto,5
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,5,  the elevator is not moving!
+524.0,Elev,1,  arrived at src, 1, Elevator call,503.13847841893045,1,-1,2,1
+524.0, elevID,1,  pos,1,  cmd, goto,0
+, elevID,0,  pos,6,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+530.0,Elevator call,529.6277472128405,3,-1,1,0, got allocated to elevator, 0
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+531.0,Elev,0,  arrived at dest, 5, this call is done!, Elevator call,319.90520204415634,6,5,3,0, Done, dt, 211.09479795584366
+531.0, elevID,0,  pos,5,  cmd, goto,10
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+535.0,Elev,1,  arrived at src, 0, Elevator call,504.4317942159655,0,-1,2,1
+535.0, elevID,1,  pos,0,  cmd, goto,-1
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+538.0,Elevator call,537.7866883694313,-1,6,1,0, got allocated to elevator, 0
+, elevID,0,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+545.0,Elevator call,544.7880392034898,6,-1,1,1, got allocated to elevator, 1
+546.0,Elev,0,  arrived at dest, 10, this call is done!, Elevator call,332.4267319393355,0,10,3,0, Done, dt, 213.57326806066447
+546.0, elevID,0,  pos,10,  cmd, goto,3
+546.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,472.7445473930129,10,-1,3,1, Done, dt, 73.25545260698709
+546.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,500.3712044996745,8,-1,3,1, Done, dt, 45.62879550032551
+546.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,503.13847841893045,1,-1,3,1, Done, dt, 42.86152158106955
+546.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,504.4317942159655,0,-1,3,1, Done, dt, 41.56820578403449
+546.0, elevID,1,  pos,-1,  cmd, goto,6
+, elevID,0,  pos,10,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,6,  the elevator is not moving!
+555.0,Elevator call,554.0892922920482,4,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,6,  cmd, stop,4
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+558.0,Elevator call,557.2441390036331,10,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+562.0,Elev,0,  arrived at src, 4, Elevator call,554.0892922920482,4,0,2,0
+562.0, elevID,0,  pos,4,  cmd, goto,3
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+563.0,Elev,1,  arrived at src, 6, Elevator call,544.7880392034898,6,-1,2,1
+563.0, elevID,1,  pos,6,  cmd, goto,-1
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+566.0,Elevator call,565.0195521745534,0,-1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,6,  cmd, stop,0
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+573.0,Elev,0,  arrived at src, 3, Elevator call,529.6277472128405,3,-1,2,0
+573.0, elevID,0,  pos,3,  cmd, goto,0
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+579.0,Elev,1,  arrived at src, 0, Elevator call,565.0195521745534,0,-1,2,1
+579.0, elevID,1,  pos,0,  cmd, goto,-1
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+582.0,Elevator call,581.8703090238192,0,3,1,0, got allocated to elevator, 0
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+586.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,426.8615805478589,2,0,3,0, Done, dt, 159.13841945214108
+586.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,554.0892922920482,4,0,3,0, Done, dt, 31.910707707951815
+586.0,Elev,0,  arrived at src, 0, Elevator call,581.8703090238192,0,3,2,0
+586.0, elevID,0,  pos,0,  cmd, goto,-1
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+590.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,544.7880392034898,6,-1,3,1, Done, dt, 45.2119607965102
+590.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,565.0195521745534,0,-1,3,1, Done, dt, 24.980447825446618
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+597.0,Elevator call,596.1232022872633,8,0,1,0, got allocated to elevator, 0
+597.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,529.6277472128405,3,-1,3,0, Done, dt, 67.37225278715948
+597.0,Elev,0,  arrived at src, -1, Elevator call,537.7866883694313,-1,6,2,0
+597.0, elevID,0,  pos,-1,  cmd, goto,6
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+601.0,Elevator call,600.9312879686208,1,0,1,1, got allocated to elevator, 1
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+601.0, elevID,1,  pos,-1,  cmd, goto,1
+, elevID,0,  pos,-1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+604.0,Elevator call,603.9342326983083,7,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+613.0,Elev,1,  arrived at src, 1, Elevator call,600.9312879686208,1,0,2,1
+613.0, elevID,1,  pos,1,  cmd, goto,0
+614.0,Elev,0,  arrived at dest, 6, this call is done!, Elevator call,537.7866883694313,-1,6,3,0, Done, dt, 76.21331163056868
+614.0, elevID,0,  pos,6,  cmd, goto,3
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+618.0,Elevator call,617.9628338542149,0,3,1,1, got allocated to elevator, 1
+, elevID,0,  pos,6,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,3,  the elevator is not moving!
+620.0,Elevator call,619.6454196970012,9,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,5,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+624.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,600.9312879686208,1,0,3,1, Done, dt, 23.068712031379164
+624.0,Elev,1,  arrived at src, 0, Elevator call,617.9628338542149,0,3,2,1
+624.0, elevID,1,  pos,0,  cmd, goto,3
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,3,  the elevator is not moving!
+627.0,Elevator call,626.2116172047942,0,1,1,1, got allocated to elevator, 1
+627.0,Elev,0,  arrived at dest, 3, this call is done!, Elevator call,581.8703090238192,0,3,3,0, Done, dt, 45.12969097618077
+627.0, elevID,0,  pos,3,  cmd, goto,0
+627.0, elevID,1,  pos,0,  cmd, stop,1
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+635.0, elevID,1,  pos,1,  cmd, goto,3
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+640.0, elevID,0,  pos,0,  cmd, goto,10
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+644.0,Elevator call,643.8547514955396,-1,2,1,0, got allocated to elevator, 0
+, elevID,0,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,10,  the elevator is not moving!
+647.0,Elev,1,  arrived at dest, 3, this call is done!, Elevator call,617.9628338542149,0,3,3,1, Done, dt, 29.037166145785136
+, elevID,0,  pos,3,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+660.0,Elev,0,  arrived at src, 10, Elevator call,557.2441390036331,10,0,2,0
+660.0, elevID,0,  pos,10,  cmd, goto,8
+661.0,Elevator call,660.0732907797126,6,10,1,1, got allocated to elevator, 1
+, elevID,0,  pos,10,  WRONG cmd, stop,8,  the elevator is not moving!
+661.0, elevID,1,  pos,3,  cmd, goto,6
+662.0,Elevator call,661.0420820268716,-1,3,1,1, got allocated to elevator, 1
+, elevID,0,  pos,10,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+663.0,Elevator call,662.1730527520776,-1,5,1,1, got allocated to elevator, 1
+, elevID,0,  pos,10,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+666.0,Elevator call,665.1155548533167,-1,8,1,1, got allocated to elevator, 1
+, elevID,0,  pos,9,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+667.0,Elevator call,666.0340294605869,4,0,1,0, got allocated to elevator, 0
+667.0,Elevator call,666.2411586665262,5,-1,1,0, got allocated to elevator, 0
+, elevID,1,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+672.0,Elev,0,  arrived at src, 8, Elevator call,596.1232022872633,8,0,2,0
+672.0, elevID,0,  pos,8,  cmd, goto,9
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+673.0,Elevator call,672.677314157026,0,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,8,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,9,  the elevator is not moving!
+674.0,Elev,1,  arrived at src, 6, Elevator call,660.0732907797126,6,10,2,1
+674.0, elevID,1,  pos,6,  cmd, goto,10
+, elevID,0,  pos,8,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,9,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+678.0,Elevator call,677.7341948387335,0,-1,1,0, got allocated to elevator, 0
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+679.0,Elevator call,678.9953584914538,-1,-2,1,0, got allocated to elevator, 0
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+683.0,Elev,0,  arrived at src, 9, Elevator call,619.6454196970012,9,0,2,0
+683.0, elevID,0,  pos,9,  cmd, goto,5
+, elevID,0,  pos,9,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,5,  the elevator is not moving!
+688.0,Elev,1,  arrived at dest, 10, this call is done!, Elevator call,660.0732907797126,6,10,3,1, Done, dt, 27.92670922028742
+688.0, elevID,1,  pos,10,  cmd, goto,-1
+, elevID,0,  pos,8,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,-1,  the elevator is not moving!
+696.0,Elevator call,695.2239881566923,0,10,1,1, got allocated to elevator, 1
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+697.0,Elev,0,  arrived at src, 5, Elevator call,666.2411586665262,5,-1,2,0
+697.0, elevID,0,  pos,5,  cmd, goto,4
+, elevID,1,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,4,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+707.0,Elevator call,706.1583474999188,-1,-2,1,0, got allocated to elevator, 0
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+708.0,Elev,0,  arrived at src, 4, Elevator call,666.0340294605869,4,0,2,0
+708.0, elevID,0,  pos,4,  cmd, goto,0
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+709.0,Elev,1,  arrived at src, -1, Elevator call,661.0420820268716,-1,3,2,1
+709.0,Elev,1,  arrived at src, -1, Elevator call,662.1730527520776,-1,5,2,1
+709.0,Elev,1,  arrived at src, -1, Elevator call,665.1155548533167,-1,8,2,1
+709.0, elevID,1,  pos,-1,  cmd, goto,3
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,3,  the elevator is not moving!
+711.0,Elevator call,710.3249770041223,0,1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+711.0, elevID,1,  pos,-1,  cmd, stop,0
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+714.0,Elevator call,713.0191971398395,1,0,1,0, got allocated to elevator, 0
+714.0,Elevator call,713.2499766424826,10,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,3,  cmd, stop,1
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+720.0,Elev,1,  arrived at src, 0, Elevator call,626.2116172047942,0,1,2,1
+720.0,Elev,1,  arrived at src, 0, Elevator call,695.2239881566923,0,10,2,1
+720.0,Elev,1,  arrived at src, 0, Elevator call,710.3249770041223,0,1,2,1
+720.0, elevID,1,  pos,0,  cmd, goto,1
+721.0,Elev,0,  arrived at src, 1, Elevator call,713.0191971398395,1,0,2,0
+721.0, elevID,0,  pos,1,  cmd, goto,0
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+723.0,Elevator call,722.6161212799507,10,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+728.0,Elevator call,727.514602863032,-1,0,1,1, got allocated to elevator, 1
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+731.0,Elev,1,  arrived at dest, 1, this call is done!, Elevator call,626.2116172047942,0,1,3,1, Done, dt, 104.78838279520585
+731.0,Elev,1,  arrived at dest, 1, this call is done!, Elevator call,710.3249770041223,0,1,3,1, Done, dt, 20.675022995877725
+731.0, elevID,1,  pos,1,  cmd, goto,3
+732.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,557.2441390036331,10,0,3,0, Done, dt, 174.7558609963669
+732.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,596.1232022872633,8,0,3,0, Done, dt, 135.87679771273667
+732.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,619.6454196970012,9,0,3,0, Done, dt, 112.35458030299878
+732.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,666.0340294605869,4,0,3,0, Done, dt, 65.96597053941309
+732.0,Elev,0,  arrived at src, 0, Elevator call,672.677314157026,0,-1,2,0
+732.0,Elev,0,  arrived at src, 0, Elevator call,677.7341948387335,0,-1,2,0
+732.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,713.0191971398395,1,0,3,0, Done, dt, 18.980802860160452
+732.0, elevID,0,  pos,0,  cmd, goto,7
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+733.0,Elevator call,732.9746341348998,6,-1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,3,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,3,  the elevator is not moving!
+738.0,Elevator call,737.314720213409,1,0,1,1, got allocated to elevator, 1
+, elevID,0,  pos,1,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,7,  the elevator is not moving!
+743.0,Elev,1,  arrived at dest, 3, this call is done!, Elevator call,661.0420820268716,-1,3,3,1, Done, dt, 81.95791797312836
+743.0, elevID,1,  pos,3,  cmd, goto,0
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+749.0,Elev,0,  arrived at src, 7, Elevator call,603.9342326983083,7,0,2,0
+749.0, elevID,0,  pos,7,  cmd, goto,-1
+, elevID,1,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+756.0, elevID,1,  pos,0,  cmd, goto,1
+, elevID,0,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+767.0,Elev,0,  arrived at src, -1, Elevator call,643.8547514955396,-1,2,2,0
+767.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,666.2411586665262,5,-1,3,0, Done, dt, 100.75884133347381
+767.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,672.677314157026,0,-1,3,0, Done, dt, 94.32268584297401
+767.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,677.7341948387335,0,-1,3,0, Done, dt, 89.26580516126648
+767.0,Elev,0,  arrived at src, -1, Elevator call,678.9953584914538,-1,-2,2,0
+767.0,Elev,0,  arrived at src, -1, Elevator call,706.1583474999188,-1,-2,2,0
+767.0, elevID,0,  pos,-1,  cmd, goto,-2
+767.0,Elev,1,  arrived at src, 1, Elevator call,737.314720213409,1,0,2,1
+767.0, elevID,1,  pos,1,  cmd, goto,-1
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+778.0,Elev,0,  arrived at dest, -2, this call is done!, Elevator call,678.9953584914538,-1,-2,3,0, Done, dt, 99.00464150854623
+778.0,Elev,0,  arrived at dest, -2, this call is done!, Elevator call,706.1583474999188,-1,-2,3,0, Done, dt, 71.84165250008118
+778.0, elevID,0,  pos,-2,  cmd, goto,-1
+, elevID,0,  pos,-2,  WRONG cmd, stop,-1,  the elevator is not moving!
+779.0,Elev,1,  arrived at src, -1, Elevator call,727.514602863032,-1,0,2,1
+779.0, elevID,1,  pos,-1,  cmd, goto,5
+780.0,Elevator call,779.399691386574,-1,5,1,0, got allocated to elevator, 0
+, elevID,0,  pos,-2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,5,  the elevator is not moving!
+789.0,Elev,0,  arrived at src, -1, Elevator call,779.399691386574,-1,5,2,0
+789.0, elevID,0,  pos,-1,  cmd, goto,2
+, elevID,1,  pos,4,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+795.0,Elev,1,  arrived at dest, 5, this call is done!, Elevator call,662.1730527520776,-1,5,3,1, Done, dt, 132.82694724792236
+795.0, elevID,1,  pos,5,  cmd, goto,-1
+, elevID,0,  pos,1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,-1,  the elevator is not moving!
+802.0,Elev,0,  arrived at dest, 2, this call is done!, Elevator call,643.8547514955396,-1,2,3,0, Done, dt, 158.14524850446037
+802.0, elevID,0,  pos,2,  cmd, goto,-2
+, elevID,1,  pos,3,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+806.0,Elevator call,805.6754743307536,-1,-2,1,0, got allocated to elevator, 0
+, elevID,0,  pos,2,  cmd, stop,-1
+, elevID,0,  pos,2,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+811.0,Elevator call,810.4469089359914,2,0,1,1, got allocated to elevator, 1
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+811.0, elevID,1,  pos,-1,  cmd, goto,2
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+815.0,Elev,0,  arrived at src, -1, Elevator call,805.6754743307536,-1,-2,2,0
+815.0, elevID,0,  pos,-1,  cmd, goto,-2
+, elevID,1,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,2,  the elevator is not moving!
+817.0,Elevator call,816.1516998390152,7,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,2,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+824.0,Elev,1,  arrived at src, 2, Elevator call,810.4469089359914,2,0,2,1
+824.0, elevID,1,  pos,2,  cmd, goto,8
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+826.0,Elevator call,825.4575184586336,7,0,1,0, got allocated to elevator, 0
+826.0,Elev,0,  arrived at dest, -2, this call is done!, Elevator call,805.6754743307536,-1,-2,3,0, Done, dt, 20.32452566924644
+826.0, elevID,0,  pos,-2,  cmd, goto,5
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,-2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,8,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+840.0,Elevator call,839.8525652620532,0,1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+840.0,Elev,1,  arrived at dest, 8, this call is done!, Elevator call,665.1155548533167,-1,8,3,1, Done, dt, 174.88444514668333
+840.0, elevID,1,  pos,8,  cmd, goto,0
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+843.0,Elev,0,  arrived at dest, 5, this call is done!, Elevator call,779.399691386574,-1,5,3,0, Done, dt, 63.60030861342602
+843.0, elevID,0,  pos,5,  cmd, goto,10
+, elevID,1,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+855.0,Elevator call,854.2002278085795,6,-1,1,1, got allocated to elevator, 1
+858.0,Elev,0,  arrived at src, 10, Elevator call,713.2499766424826,10,-1,2,0
+858.0,Elev,0,  arrived at src, 10, Elevator call,722.6161212799507,10,0,2,0
+858.0, elevID,0,  pos,10,  cmd, goto,7
+858.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,727.514602863032,-1,0,3,1, Done, dt, 130.485397136968
+858.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,737.314720213409,1,0,3,1, Done, dt, 120.68527978659097
+858.0,Elev,1,  arrived at dest, 0, this call is done!, Elevator call,810.4469089359914,2,0,3,1, Done, dt, 47.55309106400864
+858.0,Elev,1,  arrived at src, 0, Elevator call,839.8525652620532,0,1,2,1
+858.0, elevID,1,  pos,0,  cmd, goto,6
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,6,  the elevator is not moving!
+864.0,Elevator call,863.893291272948,0,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,9,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+871.0,Elevator call,870.5053023797483,0,7,1,1, got allocated to elevator, 1
+871.0,Elev,0,  arrived at src, 7, Elevator call,816.1516998390152,7,-1,2,0
+871.0,Elev,0,  arrived at src, 7, Elevator call,825.4575184586336,7,0,2,0
+871.0, elevID,0,  pos,7,  cmd, goto,0
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+874.0,Elev,1,  arrived at src, 6, Elevator call,732.9746341348998,6,-1,2,1
+874.0,Elev,1,  arrived at src, 6, Elevator call,854.2002278085795,6,-1,2,1
+874.0, elevID,1,  pos,6,  cmd, goto,0
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+887.0,Elevator call,886.5649993239458,-1,-2,1,1, got allocated to elevator, 1
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+888.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,603.9342326983083,7,0,3,0, Done, dt, 284.0657673016917
+888.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,722.6161212799507,10,0,3,0, Done, dt, 165.38387872004932
+888.0,Elev,0,  arrived at dest, 0, this call is done!, Elevator call,825.4575184586336,7,0,3,0, Done, dt, 62.54248154136644
+888.0,Elev,0,  arrived at src, 0, Elevator call,863.893291272948,0,-1,2,0
+888.0, elevID,0,  pos,0,  cmd, goto,-1
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+890.0,Elev,1,  arrived at src, 0, Elevator call,870.5053023797483,0,7,2,1
+890.0, elevID,1,  pos,0,  cmd, goto,-1
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+893.0,Elevator call,892.5212150591021,9,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-1,  the elevator is not moving!
+899.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,713.2499766424826,10,-1,3,0, Done, dt, 185.75002335751742
+899.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,816.1516998390152,7,-1,3,0, Done, dt, 82.84830016098476
+899.0,Elev,0,  arrived at dest, -1, this call is done!, Elevator call,863.893291272948,0,-1,3,0, Done, dt, 35.10670872705202
+899.0, elevID,0,  pos,-1,  cmd, goto,7
+, elevID,0,  pos,-1,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,7,  the elevator is not moving!
+901.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,732.9746341348998,6,-1,3,1, Done, dt, 168.02536586510018
+901.0,Elev,1,  arrived at dest, -1, this call is done!, Elevator call,854.2002278085795,6,-1,3,1, Done, dt, 46.799772191420516
+901.0,Elev,1,  arrived at src, -1, Elevator call,886.5649993239458,-1,-2,2,1
+901.0, elevID,1,  pos,-1,  cmd, goto,1
+, elevID,0,  pos,-1,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,-1,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,7,  the elevator is not moving!
+911.0,Elevator call,910.5388559417848,6,5,1,0, got allocated to elevator, 0
+, elevID,0,  pos,6,  WRONG cmd, stop,7,  the elevator is not moving!
+913.0,Elev,1,  arrived at dest, 1, this call is done!, Elevator call,839.8525652620532,0,1,3,1, Done, dt, 73.14743473794681
+913.0, elevID,1,  pos,1,  cmd, goto,-2
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+916.0,Elevator call,915.9490574608818,4,-1,1,1, got allocated to elevator, 1
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+917.0, elevID,0,  pos,7,  cmd, goto,0
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,-2,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+926.0,Elev,1,  arrived at dest, -2, this call is done!, Elevator call,886.5649993239458,-1,-2,3,1, Done, dt, 39.43500067605419
+926.0, elevID,1,  pos,-2,  cmd, goto,0
+, elevID,0,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-2,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,-1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+934.0,Elevator call,933.8580452488764,7,5,1,0, got allocated to elevator, 0
+934.0, elevID,0,  pos,0,  cmd, goto,5
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+938.0, elevID,1,  pos,0,  cmd, goto,10
+, elevID,0,  pos,0,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,1,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,5,  the elevator is not moving!
+, elevID,1,  pos,0,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,10,  the elevator is not moving!
+949.0, elevID,0,  pos,5,  cmd, goto,6
+, elevID,1,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+958.0,Elev,1,  arrived at dest, 10, this call is done!, Elevator call,695.2239881566923,0,10,3,1, Done, dt, 262.77601184330774
+958.0, elevID,1,  pos,10,  cmd, goto,7
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+960.0,Elev,0,  arrived at src, 6, Elevator call,910.5388559417848,6,5,2,0
+960.0, elevID,0,  pos,6,  cmd, goto,10
+, elevID,1,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+962.0,Elevator call,961.6862855708133,6,-1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,9,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,8,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,10,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+971.0,Elev,1,  arrived at dest, 7, this call is done!, Elevator call,870.5053023797483,0,7,3,1, Done, dt, 100.49469762025171
+971.0, elevID,1,  pos,7,  cmd, goto,6
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+973.0,Elevator call,972.8032126022729,1,0,1,1, got allocated to elevator, 1
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+974.0, elevID,0,  pos,10,  cmd, goto,7
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+976.0,Elevator call,975.8361202753667,0,-1,1,1, got allocated to elevator, 1
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,7,  WRONG cmd, stop,6,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+979.0,Elevator call,978.5925148564796,10,0,1,0, got allocated to elevator, 0
+979.0,Elevator call,978.6210500641439,10,-1,1,0, got allocated to elevator, 0
+, elevID,0,  pos,10,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,9,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,8,  WRONG cmd, stop,7,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+982.0,Elev,1,  arrived at src, 6, Elevator call,961.6862855708133,6,-1,2,1
+982.0, elevID,1,  pos,6,  cmd, goto,1
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+985.0,Elevator call,984.1840185574983,7,0,1,0, got allocated to elevator, 0
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+987.0,Elev,0,  arrived at src, 7, Elevator call,933.8580452488764,7,5,2,0
+987.0,Elev,0,  arrived at src, 7, Elevator call,984.1840185574983,7,0,2,0
+987.0, elevID,0,  pos,7,  cmd, goto,0
+, elevID,1,  pos,6,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,5,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,4,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,3,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,2,  WRONG cmd, stop,1,  the elevator is not moving!
+, elevID,0,  pos,7,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,6,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,5,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,4,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,3,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,0,  pos,2,  WRONG cmd, stop,0,  the elevator is not moving!
+997.0,Elev,1,  arrived at src, 1, Elevator call,972.8032126022729,1,0,2,1
+997.0, elevID,1,  pos,1,  cmd, goto,0
+, elevID,0,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+, elevID,1,  pos,1,  WRONG cmd, stop,0,  the elevator is not moving!
+1000.0,************* Simulation Ended ************
+Code Owners,101309018123456789,  Case,2,  Total waiting time: 7520.792822120195,  average waiting time per call: 75.20792822120194,  unCompleted calls,10,  certificate, -101309016229066859
