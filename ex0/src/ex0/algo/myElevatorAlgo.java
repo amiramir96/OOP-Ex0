@@ -472,13 +472,15 @@ public class myElevatorAlgo implements ElevatorAlgo {
     @Override
     public void cmdElevator(int elev) {
         Elevator e = this._building.getElevetor(elev);
-//        //list is empty
+
+        //Ori's code
+        //list is empty
         if(this.dataCalls.get(elev).isEmpty())
             return;
 
         //start operating
         if(!this.dataCalls.get(elev).isEmpty() && e.getState()==0)
-            e.goTo(e.getPos());
+            e.goTo(this.dataCalls.get(elev).getFirst());
 
         //stop
         if(this.dataCalls.get(elev).getFirst()==e.getPos()){
@@ -490,37 +492,39 @@ public class myElevatorAlgo implements ElevatorAlgo {
 
 
 
-//        /* Amir's code
-//        if (this.dataCalls.get(elev).size() == 0){
-//            return;
-//        }
-//        if (this.dataCalls.get(elev).getFirst() == e.getPos()){
-//            e.goTo(this.dataCalls.get(elev).getFirst());
-//            e.stop(this.dataCalls.get(elev).getFirst());
-//            this.dataCalls.get(elev).removeFirst();
-//        }
-//        if (e.getState() == 0 && this.dataCalls.get(elev).size() > 0){
-//            e.goTo(this.dataCalls.get(elev).getFirst());
-//            return;
-//        }
-//        else if (this.dataCalls.get(elev).size() > 0 && e.getState() == 1){
-//            if (e.getPos() < this.dataCalls.get(elev).getFirst()){
-////                e.goTo(this.dataCalls.get(elev).getFirst());
-//                e.stop(this.dataCalls.get(elev).getFirst());
-//                return;
-//            }
-////            removeIrrelevantTaskUP(e, elev);
-//
-//        }
-//        else if (this.dataCalls.get(elev).size() > 0 && e.getState() == -1){
-//            if (e.getPos() > this.dataCalls.get(elev).getFirst()){
-////                e.goTo(this.dataCalls.get(elev).getFirst());
-//                e.stop(this.dataCalls.get(elev).getFirst());
-//                return;
-//            }
-////            removeIrrelevantTaskDOWN(e, elev);
-//
-//        }
+/*
+         //Amir's code
+        if (this.dataCalls.get(elev).size() == 0){
+            return;
+        }
+        if (this.dataCalls.get(elev).getFirst() == e.getPos()){
+            e.goTo(this.dataCalls.get(elev).getFirst());
+            e.stop(this.dataCalls.get(elev).getFirst());
+            this.dataCalls.get(elev).removeFirst();
+        }
+        if (e.getState() == 0 && this.dataCalls.get(elev).size() > 0){
+            e.goTo(this.dataCalls.get(elev).getFirst());
+            return;
+        }
+        else if (this.dataCalls.get(elev).size() > 0 && e.getState() == 1){
+            if (e.getPos() < this.dataCalls.get(elev).getFirst()){
+                e.goTo(this.dataCalls.get(elev).getFirst());
+                e.stop(this.dataCalls.get(elev).getFirst());
+                return;
+            }
+            removeIrrelevantTaskUP(e, elev);
+
+        }
+        else if (this.dataCalls.get(elev).size() > 0 && e.getState() == -1){
+            if (e.getPos() > this.dataCalls.get(elev).getFirst()){
+                e.goTo(this.dataCalls.get(elev).getFirst());
+                e.stop(this.dataCalls.get(elev).getFirst());
+                return;
+            }
+            removeIrrelevantTaskDOWN(e, elev);
+
+        }
+*/
 
         return;
 //        */
