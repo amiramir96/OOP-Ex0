@@ -478,6 +478,15 @@ public class myElevatorAlgo implements ElevatorAlgo {
         if(this.dataCalls.get(elev).isEmpty())
             return;
 
+        e.goTo(this.dataCalls.get(elev).getFirst());
+        e.stop(this.dataCalls.get(elev).getFirst());
+
+        if(this.dataCalls.get(elev).getFirst()==e.getPos())
+            this.dataCalls.get(elev).removeFirst();
+
+        return;
+
+/*
         //start operating
         if(!this.dataCalls.get(elev).isEmpty() && e.getState()==0)
             e.goTo(this.dataCalls.get(elev).getFirst());
@@ -486,7 +495,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         if(this.dataCalls.get(elev).getFirst()==e.getPos()){
             e.stop(e.getPos());
             this.dataCalls.get(elev).removeFirst();
-        }
+        }*/
 
 
 
@@ -526,7 +535,6 @@ public class myElevatorAlgo implements ElevatorAlgo {
         }
 */
 
-        return;
 //        */
 //        Elevator curr = this.getBuilding().getElevetor(elev);
 //        if(curr.getState() == Elevator.LEVEL) {
