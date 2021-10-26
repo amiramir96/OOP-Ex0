@@ -10,15 +10,34 @@ public class myElevatorAlgo implements ElevatorAlgo {
     private Building _building;
     private ArrayList<LinkedList<Integer>> dataCalls; //dataStructre to hold the route of floors that every elevetor shall do
     /**
+     *for dilema cases
+     *dependacncy on num of floors of the building
+     * @param epsFloor parameter floors to use
+     * @param epsTime parameter time to use
+     */
+    double epsFloor;
+    double epsTime;
+    /**
      * constructor
      * @param b - building
      */
+    /**
+     * @param cmdMatrix - use to store goto and stop locations
+     */
+    int[][] cmdMatrix;
     public myElevatorAlgo(Building b) {
         _building = b;
         dataCalls = new ArrayList<LinkedList<Integer>>(b.numberOfElevetors());
+        int speedCounter = 0;
+        int totalFloors = Math.abs(this._building.maxFloor() - this._building.minFloor());
+        cmdMatrix = new int[this._building.numberOfElevetors()][3];
         for(int i=0; i < b.numberOfElevetors(); i++){
             this.dataCalls.add(new LinkedList<Integer>());
+            speedCounter += this._building.getElevetor(i).getSpeed();
         }
+        double avgSpeed = speedCounter/this._building.numberOfElevetors();
+        epsFloor = (totalFloors *0.15);
+        epsTime = 1 - avgSpeed/totalFloors*1.5;
     }
 
     @Override
@@ -69,7 +88,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      */
     private int[] allocateAnElevatorHelperViaUpMove(CallForElevator c) {
         boolean foundElev = false; //way to know if to exit from func between the stages (1 and 2)
-        int floorDestIdxToAdd;
+        int floorDestIdxToAdd, floorSrcIdxToAdd; //will be used as indexes that represent where to add the floors from the callforelevetor
         int src = c.getSrc(), dest = c.getDest();
         int[] whereToAddAtDataCalls = new int[2];
         int[] outputArr = new int[3];
@@ -83,13 +102,32 @@ public class myElevatorAlgo implements ElevatorAlgo {
             //mission is up so "good" case is only when elevetor position is BELOW the source target
             if (tempElev.getState() == 0 || tempElev.getState() == c.getType() && tempElev.getPos() < src){
                 whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+                floorSrcIdxToAdd = whereToAddAtDataCalls[0];
                 floorDestIdxToAdd = whereToAddAtDataCalls[1];
-                timeTemp = timeToEndMission(tempElev, src, dest, floorDestIdxToAdd, 1);
+                timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, 1);
                 if (timeVal > timeTemp){
                     foundElev = true;
                     timeVal = timeTemp;
-                    outputArr[0] = whereToAddAtDataCalls[0];
-                    outputArr[1] = whereToAddAtDataCalls[1];
+                    outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                    outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
+                    outputArr[2] = i;
+                }
+            }
+        }
+        for (int i=0; i < numOfElevators; i++){
+            tempElev = this._building.getElevetor(i);
+            //mission is up so "good" case is only when elevetor position is BELOW the source target
+            if (tempElev.getState() == 0 || tempElev.getState() == c.getType() && tempElev.getPos() < src){
+                whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+                floorSrcIdxToAdd = whereToAddAtDataCalls[0];
+                floorDestIdxToAdd = whereToAddAtDataCalls[1];
+                timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, 1);
+                if (timeVal >= epsTime*timeTemp && outputArr[0] > 0 && floorSrcIdxToAdd > 0 &&
+                                Math.abs(src - this.dataCalls.get(outputArr[2]).get(outputArr[0]-1)) > Math.abs(src - this.dataCalls.get(i).get(floorSrcIdxToAdd-1)) +epsFloor){
+                    foundElev = true;
+                    timeVal = timeTemp;
+                    outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                    outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
                     outputArr[2] = i;
                 }
             }
@@ -101,12 +139,28 @@ public class myElevatorAlgo implements ElevatorAlgo {
         for (int i=0; i < numOfElevators; i++){
             tempElev = this._building.getElevetor(i);
             whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+            floorSrcIdxToAdd = whereToAddAtDataCalls[0];
             floorDestIdxToAdd = whereToAddAtDataCalls[1];
-            timeTemp = timeToEndMission(tempElev, src, dest, floorDestIdxToAdd, 1);
-            if (timeVal > timeTemp){
+            timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, 1);
+            if (timeVal > timeTemp ){
                 timeVal = timeTemp;
-                outputArr[0] = whereToAddAtDataCalls[0];
-                outputArr[1] = whereToAddAtDataCalls[1];
+                outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
+                outputArr[2] = i;
+            }
+        }
+        for (int i=0; i < numOfElevators; i++){
+            tempElev = this._building.getElevetor(i);
+            whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+            floorSrcIdxToAdd = whereToAddAtDataCalls[0];
+            floorDestIdxToAdd = whereToAddAtDataCalls[1];
+            timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, 1);
+            if (timeVal >= epsTime*timeTemp && outputArr[0] > 0 && floorSrcIdxToAdd > 0 &&
+                    Math.abs(src - this.dataCalls.get(outputArr[2]).get(outputArr[0]-1)) > Math.abs(src - this.dataCalls.get(i).get(floorSrcIdxToAdd-1)) +epsFloor
+            ){
+                timeVal = timeTemp;
+                outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
                 outputArr[2] = i;
             }
         }
@@ -124,7 +178,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      */
     private int[] allocateAnElevatorHelperViaDownMove(CallForElevator c) {
         boolean foundElev = false; //way to know if to exit from func between the stages (1 and 2)
-        int floorDestIdxToAdd;
+        int floorDestIdxToAdd, floorSrcIdxToAdd;
         int src = c.getSrc(), dest = c.getDest();
         int[] whereToAddAtDataCalls = new int[2];
         int[] outputArr = new int[3];
@@ -138,13 +192,32 @@ public class myElevatorAlgo implements ElevatorAlgo {
             //mission is DOWN so "good" case is only when elevetor position is ABOVE the source target
             if (tempElev.getState() == 0 || tempElev.getState() == c.getType() && tempElev.getPos() > src){
                 whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+                floorSrcIdxToAdd = whereToAddAtDataCalls[0];
                 floorDestIdxToAdd = whereToAddAtDataCalls[1];
-                timeTemp = timeToEndMission(tempElev, src, dest, floorDestIdxToAdd, -1);
+                timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, -1);
                 if (timeVal > timeTemp){
                     foundElev = true;
                     timeVal = timeTemp;
-                    outputArr[0] = whereToAddAtDataCalls[0];
-                    outputArr[1] = whereToAddAtDataCalls[1];
+                    outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                    outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
+                    outputArr[2] = i;
+                }
+            }
+        }
+        for (int i=0; i < numOfElevators; i++){
+            tempElev = this._building.getElevetor(i);
+            //mission is DOWN so "good" case is only when elevetor position is ABOVE the source target
+            if (tempElev.getState() == 0 || tempElev.getState() == c.getType() && tempElev.getPos() > src){
+                whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+                floorSrcIdxToAdd = whereToAddAtDataCalls[0];
+                floorDestIdxToAdd = whereToAddAtDataCalls[1];
+                timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, -1);
+                if (timeVal >= epsTime*timeTemp && outputArr[0] > 0 && floorSrcIdxToAdd > 0 &&
+                                Math.abs(src - this.dataCalls.get(outputArr[2]).get(outputArr[0]-1)) > Math.abs(src - this.dataCalls.get(i).get(floorSrcIdxToAdd-1)) +epsFloor){
+                    foundElev = true;
+                    timeVal = timeTemp;
+                    outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                    outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
                     outputArr[2] = i;
                 }
             }
@@ -156,12 +229,28 @@ public class myElevatorAlgo implements ElevatorAlgo {
         for (int i=0; i < numOfElevators; i++){
             tempElev = this._building.getElevetor(i);
             whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+            floorSrcIdxToAdd = whereToAddAtDataCalls[0];
             floorDestIdxToAdd = whereToAddAtDataCalls[1];
-            timeTemp = timeToEndMission(tempElev, src, dest, floorDestIdxToAdd, -1);
-            if (timeVal > timeTemp){
+            timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, -1);
+            if (timeVal > timeTemp ){
                 timeVal = timeTemp;
-                outputArr[0] = whereToAddAtDataCalls[0];
-                outputArr[1] = whereToAddAtDataCalls[1];
+                outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
+                outputArr[2] = i;
+            }
+        }
+        for (int i=0; i < numOfElevators; i++){
+            tempElev = this._building.getElevetor(i);
+            whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+            floorSrcIdxToAdd = whereToAddAtDataCalls[0];
+            floorDestIdxToAdd = whereToAddAtDataCalls[1];
+            timeTemp = timeToEndMission(tempElev, src, dest, floorSrcIdxToAdd, floorDestIdxToAdd, -1);
+            if (timeVal >= epsTime*timeTemp && outputArr[0] > 0 && floorSrcIdxToAdd > 0 &&
+                    Math.abs(src - this.dataCalls.get(outputArr[2]).get(outputArr[0]-1)) > Math.abs(src - this.dataCalls.get(i).get(floorSrcIdxToAdd-1)) +epsFloor
+            ){
+                timeVal = timeTemp;
+                outputArr[0] = whereToAddAtDataCalls[0]; //represent the idx num where to add the src floor from CallFORELEVETOR
+                outputArr[1] = whereToAddAtDataCalls[1]; //same for dest
                 outputArr[2] = i;
             }
         }
@@ -173,16 +262,16 @@ public class myElevatorAlgo implements ElevatorAlgo {
      * @param elevator - choosen elevator to calculate it time to end the task
      * @param src - src floor of the task
      * @param dest - dest floor of the task
-//   * @param howManyStops - amount of stops depend on the index where we gonna add the "dest floor" from the call
+//   * @param howManyStops - amount of stops depend on the index where we gonna add the "src floor" and the "dest floor" from the call
      * @param mission - task direction: UP = 1, DOWN = -1
      * @return time to End the Task for the elevator via the options writened before
      */
-    private double timeToEndMission(Elevator elevator, int src, int dest, int whereToAddfloorDest, int mission) {
+    private double timeToEndMission(Elevator elevator, int src, int dest, int whereToAddfloorSrcint, int whereToAddfloorDest, int mission) {
         int amountOfStops = 0;
         double approximateMoveTime, approximateWaitTime;
         //approximateMoveTime is all the movement between floors (sigma of all nodes from curr position
         //to the "how many stops" index
-        approximateMoveTime = sumOfFloors(elevator, dest, whereToAddfloorDest) * (1 / elevator.getSpeed());
+        approximateMoveTime = sumOfFloors(elevator, src, dest,whereToAddfloorSrcint, whereToAddfloorDest) / elevator.getSpeed();
         //approximateWaitTime is all parameters that gonna delay the movement in summery, multiply num of stops
         //whereToAddfloorDest == how many stops along the road
         approximateWaitTime = whereToAddfloorDest * (elevator.getTimeForClose() + elevator.getTimeForOpen() + elevator.getStopTime() + elevator.getStartTime());
@@ -196,24 +285,53 @@ public class myElevatorAlgo implements ElevatorAlgo {
      *             the sumOf floors returns: 1->7->3->10 => 6+4+7 = 17
      * @param elevator - relevant elevetor
      * @param dest
-     * @param tillWhereToCount - idx - where we shall add the destFloor of the task => means thats the position which we shall count till..
+     * @param stopCountTillSrc - idx - where we shall add the srcFloor of the task => means thats the position which we shall count till..
+     * @param stopCountTillDest - same as above, just with the destFloor
      * @return
      */
-    private int sumOfFloors(Elevator elevator, int dest, int tillWhereToCount) {
+    private int sumOfFloors(Elevator elevator, int src, int dest, int stopCountTillSrc, int stopCountTillDest) {
         int sum = 0;
-        int temp = elevator.getPos();
+        int tempSrc = elevator.getPos();
         int id = elevator.getID();
         if (this.dataCalls.get(id).size() == 0){
-            sum += Math.abs(temp - dest);
+            sum = sum + Math.abs(tempSrc - src) + Math.abs(src - dest);
             return sum;
         }
         else {
-            for(int i=0; i < tillWhereToCount && i < this.dataCalls.get(id).size(); i++){
-                sum += Math.abs(temp - this.dataCalls.get(id).get(i));
-                temp = this.dataCalls.get(id).get(i);
+            //route till the src floor
+            int i=0;
+            int tempDest = this.dataCalls.get(id).get(i);
+            while(i < stopCountTillSrc){
+                sum += Math.abs(tempSrc - tempDest);
+                if (i+1 < stopCountTillSrc){
+                    i++;
+                    tempSrc = tempDest;
+                    tempDest = this.dataCalls.get(id).get(i);
+                }
+                else {
+                    break; //have no point to forwarding the i idx since the loop will be end;
+                }
             }
+            //add the floors between last addition floor, to the src floor
+            tempSrc = tempDest;
+            tempDest = src;
+            sum += Math.abs(tempSrc - tempDest);
+            int j = stopCountTillSrc;
+            //route from src floor till the dest floor
+            while  (j < stopCountTillDest && j < this.dataCalls.get(id).size()){
+                tempSrc = tempDest;
+                tempDest = this.dataCalls.get(id).get(j);
+                sum += Math.abs(tempSrc - tempDest);
+                if (j+1 < stopCountTillDest && j+1 < this.dataCalls.get(id).size()){
+                    j++;
+                }
+                else {
+                    break; //have no point to forwarding the i idx since the loop will be end;
+                }
+            }
+            sum += Math.abs(tempDest - dest);
         }
-        sum += Math.abs(temp - dest);
+        //add gap between last addition floor, to the dest floor
         return sum;
     }
     /**
@@ -460,28 +578,78 @@ public class myElevatorAlgo implements ElevatorAlgo {
     @Override
     public void cmdElevator(int elev) {
         Elevator e = this._building.getElevetor(elev);
-        //list is empty
+        int tempFirst;
         if (this.dataCalls.get(elev).isEmpty()){
+            this.cmdMatrix[elev][0] = Integer.MIN_VALUE;
+            this.cmdMatrix[elev][1] = Integer.MIN_VALUE;
             return;
         }
-        //if elev got to the first floor in the list -> we shall remove it
-        //also solve unique situtaion - elev starts the simulation in this floor so we shall tell her to open doors
-        else if (this.dataCalls.get(elev).getFirst() == e.getPos()){
-            e.stop(this.dataCalls.get(elev).getFirst());
-            this.dataCalls.get(elev).removeFirst();
-            //check now if list isEmpty so we shall return;
+        //for matrix - idx 0 is goto, idx 1 is next stop, idx 2 is
+        if (e.getState() == 0) {
+            if (e.getPos() == this.dataCalls.get(elev).getFirst()){
+                this.dataCalls.get(elev).removeFirst();
+            }
             if (this.dataCalls.get(elev).isEmpty()){
+                this.cmdMatrix[elev][0] = Integer.MIN_VALUE;
+                this.cmdMatrix[elev][1] = Integer.MIN_VALUE;
                 return;
             }
+            this.cmdMatrix[elev][0] = this.dataCalls.get(elev).getFirst();
+            e.goTo(this.cmdMatrix[elev][0]);
         }
-        //for LEVEL state - use goto command
-        if (e.getState() == 0){
-            e.goTo(this.dataCalls.get(elev).getFirst());
-        }
-        //while UP or DOWN state - use stop command
         else {
-            e.stop(this.dataCalls.get(elev).getFirst());
+            tempFirst = this.dataCalls.get(elev).getFirst();
+            if (this.cmdMatrix[elev][0] == tempFirst) {
+                this.cmdMatrix[elev][1] = Integer.MIN_VALUE;
+                return;
+            }
+            else {
+                if (isBetween2(e.getPos(), this.cmdMatrix[elev][0], tempFirst)) {
+                    if (tempFirst == this.cmdMatrix[elev][1]) {
+                        return;
+                    }
+                    else {
+                        e.stop(tempFirst);
+                        this.cmdMatrix[elev][1] = tempFirst;
+                    }
+                }
+                else {
+                        this.dataCalls.get(elev).removeFirst();
+                }
+            }
         }
+
+//
+//        //list is empty
+//        if (this.dataCalls.get(elev).isEmpty()) {
+//            return;
+//        }
+//        //if elev got to the first floor in the list -> we shall remove it
+//        //also solve unique situtaion - elev starts the simulation in this floor so we shall tell her to open doors
+//        else if (this.dataCalls.get(elev).getFirst() == e.getPos()) {
+//            e.stop(this.dataCalls.get(elev).getFirst());
+//            this.dataCalls.get(elev).removeFirst();
+//            //check now if list isEmpty so we shall return;
+//            if (this.dataCalls.get(elev).isEmpty()) {
+//                return;
+//            }
+//        }
+//        //for LEVEL state - use goto command
+//        if (e.getState() == 0) {
+//            e.goTo(this.dataCalls.get(elev).getFirst());
+//        }
+//        //while UP or DOWN state - use stop command
+//        else {
+//            e.stop(this.dataCalls.get(elev).getFirst());
+//        }
         return;
+    }
+
+
+    private boolean isBetween2(int srcFloor, int destFloor, int potInsert){
+        if (srcFloor > potInsert && potInsert > destFloor){
+            return true;
+        }
+        return (srcFloor < potInsert && potInsert < destFloor);
     }
 }
