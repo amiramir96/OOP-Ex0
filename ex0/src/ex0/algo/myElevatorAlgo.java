@@ -32,7 +32,6 @@ public class myElevatorAlgo implements ElevatorAlgo {
     }
 
     @Override
-
     /**
      *     split to 2 options:
      *     1- mission type is for UP
