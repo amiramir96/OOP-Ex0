@@ -533,16 +533,9 @@ public class myElevatorAlgo implements ElevatorAlgo {
         //if elev got to the first floor in the list -> we shall remove it
         //also solve unique situtaion - elev starts the simulation in this floor so we shall tell her to open doors
         else if (this.dataCalls.get(elev).getFirst() == e.getPos()) {
-            if (this.cmdMatrix[elev][2] == 0){ //we didnt sent yet stop command to this mission, shall fix it
                 this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst(); //hold the stop floor mission
                 this.dataCalls.get(elev).removeFirst(); //remove the irrelevant floor from the datacalls structure
-            }
-            //send stop mission only if its not GOTO floor and switch is still off
-            if (!(this.cmdMatrix[elev][1] == this.cmdMatrix[elev][0]) && this.cmdMatrix[elev][2] == 0){
                 e.stop(this.cmdMatrix[elev][1]);
-                this.cmdMatrix[elev][2]++; //switch up
-                return;
-            }
             //check now if list isEmpty so we shall return;
             if (this.dataCalls.get(elev).isEmpty()) {
                 return;
