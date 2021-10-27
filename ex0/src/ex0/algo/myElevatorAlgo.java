@@ -578,75 +578,61 @@ public class myElevatorAlgo implements ElevatorAlgo {
     @Override
     public void cmdElevator(int elev) {
         Elevator e = this._building.getElevetor(elev);
-        int tempFirst;
-        if (this.dataCalls.get(elev).isEmpty()){
+        //list is empty
+        if (this.dataCalls.get(elev).isEmpty()) { //zeroing our monitoring matrix
             this.cmdMatrix[elev][0] = Integer.MIN_VALUE;
             this.cmdMatrix[elev][1] = Integer.MIN_VALUE;
+            this.cmdMatrix[elev][2] = 0;
             return;
         }
-        //for matrix - idx 0 is goto, idx 1 is next stop, idx 2 is
-        if (e.getState() == 0) {
-            if (e.getPos() == this.dataCalls.get(elev).getFirst()){
-                this.dataCalls.get(elev).removeFirst();
+        //if elev got to the first floor in the list -> we shall remove it
+        //also solve unique situtaion - elev starts the simulation in this floor so we shall tell her to open doors
+        else if (this.dataCalls.get(elev).getFirst() == e.getPos()) {
+            if (this.cmdMatrix[elev][2] == 0){ //we didnt sent yet stop command to this mission, shall fix it
+                this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst(); //hold the stop floor mission
+                this.dataCalls.get(elev).removeFirst(); //remove the irrelevant floor from the datacalls structure
             }
-            if (this.dataCalls.get(elev).isEmpty()){
-                this.cmdMatrix[elev][0] = Integer.MIN_VALUE;
-                this.cmdMatrix[elev][1] = Integer.MIN_VALUE;
+            //send stop mission only if its not GOTO floor and switch is still off
+            if (!(this.cmdMatrix[elev][1] == this.cmdMatrix[elev][0]) && this.cmdMatrix[elev][2] == 0){
+                e.stop(this.cmdMatrix[elev][1]);
+                this.cmdMatrix[elev][2]++; //switch up
                 return;
             }
-            this.cmdMatrix[elev][0] = this.dataCalls.get(elev).getFirst();
-            e.goTo(this.cmdMatrix[elev][0]);
-        }
-        else {
-            tempFirst = this.dataCalls.get(elev).getFirst();
-            if (this.cmdMatrix[elev][0] == tempFirst) {
-                this.cmdMatrix[elev][1] = Integer.MIN_VALUE;
+            //check now if list isEmpty so we shall return;
+            if (this.dataCalls.get(elev).isEmpty()) {
                 return;
             }
             else {
-                if (isBetween2(e.getPos(), this.cmdMatrix[elev][0], tempFirst)) {
-                    if (tempFirst == this.cmdMatrix[elev][1]) {
-                        return;
-                    }
-                    else {
-                        e.stop(tempFirst);
-                        this.cmdMatrix[elev][1] = tempFirst;
-                    }
-                }
-                else {
-                        this.dataCalls.get(elev).removeFirst();
-                }
+                this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst();
             }
         }
-
-//
-//        //list is empty
-//        if (this.dataCalls.get(elev).isEmpty()) {
-//            return;
-//        }
-//        //if elev got to the first floor in the list -> we shall remove it
-//        //also solve unique situtaion - elev starts the simulation in this floor so we shall tell her to open doors
-//        else if (this.dataCalls.get(elev).getFirst() == e.getPos()) {
-//            e.stop(this.dataCalls.get(elev).getFirst());
-//            this.dataCalls.get(elev).removeFirst();
-//            //check now if list isEmpty so we shall return;
-//            if (this.dataCalls.get(elev).isEmpty()) {
-//                return;
-//            }
-//        }
-//        //for LEVEL state - use goto command
-//        if (e.getState() == 0) {
-//            e.goTo(this.dataCalls.get(elev).getFirst());
-//        }
-//        //while UP or DOWN state - use stop command
-//        else {
-//            e.stop(this.dataCalls.get(elev).getFirst());
-//        }
+        //for LEVEL state - use goto command
+        if (e.getState() == 0) {
+            e.goTo(this.dataCalls.get(elev).getFirst());
+            this.cmdMatrix[elev][0] = this.dataCalls.get(elev).getFirst();
+            this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst();
+            this.cmdMatrix[elev][2] = 0; //start new chain of missions, switch off!
+        }
+        //while UP or DOWN state - use stop command
+        else {
+            //curr stop or goto floors is already in our monitoring matrix
+            if (this.cmdMatrix[elev][1] == this.dataCalls.get(elev).getFirst()
+                    || this.cmdMatrix[elev][0] == this.dataCalls.get(elev).getFirst()){
+                this.cmdMatrix[elev][2] = 0;
+            }
+            //value from dataCalls can be pushed to stop before the curr value at our monitoring matrix
+            //shall send command to stop there and edit the new stop floor at monitoring matrix
+            else if(isBetweenForCmd(e.getPos(), this.cmdMatrix[elev][1], this.dataCalls.get(elev).getFirst())){
+                e.stop(this.dataCalls.get(elev).getFirst());
+                this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst();
+                this.cmdMatrix[elev][2] = 0;
+            }
+        }
         return;
     }
 
 
-    private boolean isBetween2(int srcFloor, int destFloor, int potInsert){
+    private boolean isBetweenForCmd(int srcFloor, int destFloor, int potInsert){
         if (srcFloor > potInsert && potInsert > destFloor){
             return true;
         }
