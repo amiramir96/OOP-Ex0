@@ -15,7 +15,7 @@ public class Ex0_main {
     public static void main(String[] ar) {
         String codeOwner = codeOwner();
         Simulator_A.setCodeOwner(codeOwner);
-        int stage = 9;  // any case in [0,9].
+        int stage = 8;  // any case in [0,9].
         System.out.println("Ex0 Simulator: isStarting, stage="+stage+") ... =  ");
         String callFile = null; // use the predefined cases [1-9].
         // String callFile = "data/Ex0_stage_2__.csv"; //
@@ -41,8 +41,8 @@ public class Ex0_main {
 
     private static String codeOwner() {
         String owners = "insomnia / 2";
-        if(ID0!=null) {owners = "101309018"+ID0;}
-        if(ID1!=null) {owners += "001501809"+ID1;}
+        if(ID0!=null) {owners = "316049311"+ID0;}
+        if(ID1!=null) {owners += "212458244"+ID1;}
         if(ID2!=null) {owners += ","+ID2;}
         return owners;
     }
