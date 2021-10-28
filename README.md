@@ -48,11 +48,43 @@ the thinking about this mechanic came from merging some army experience with the
 
 if we lose a small amount of time till the point of an epsilon parameter, but we gain much more smaller route the a given elevator, we shall take it because of the thinking that:
 
-we never look only on the present as the END, we shall always improve our position for the next step!
+we dont look on the present time as the END, we shall always improve our position for the next step!
  
- # description
+ 
+
+# little description for the implimention
  the algorithm code is composed by two classes:
  1- myElevatorAlgorithm which impliments ElevatorAlgo interface 
  2- DataCalls class which built by arrayList of LinkedList and each of inner linked list at index i represent a route that the elevator i shall move through 
  
+ 
+ # navigation in the git Project
+ex0 -> src -> ex0 -> myElevatorAlgo - the main algorithm, the brain.
+that class shall be downloaded with the DataCalls.java file as well, the DataCalls class provides the data structre which hold all of the elevators routes (one linked list of integers per elevators, ea node represent a station floor which the elev shall be move through (and stop there).
+also there is uml diagram that helps to understand the connections between objects - have to be download to ur pc.
+html files shall downloaded as well - its the java doc of myElevatorAlgorithm && DataCalls classes.
+https://github.com/amiramir96/OOP-Ex0/tree/main/ex0/src/ex0/algo
+ 
+ex0 -> src -> tests - the basic JUNIT files which provides u basic checks to ensure that the classes works.
+https://github.com/amiramir96/OOP-Ex0/tree/main/ex0/src/tests
+
+logs csv and results - hold the best results for simulation stages of our teachers to OOP course in Ariel University (credit to proffesor boaz ben mosh and doctor elizabeth itzkovich)
+summary xlsx file hold the end line of every stage simulation, without the logs or any other extra details
+https://github.com/amiramir96/OOP-Ex0/tree/main/logs%20csv%20and%20results
+
+tests - new simulation scenarioes which tests the challenge cases of the code in any relevant function that take role in the allocate, adding and commanding phases:
+there is dedicated readme file focused only for this tests files, their results log is there as well!
+https://github.com/amiramir96/OOP-Ex0/tree/main/tests
+ 
+Ex0 part 1.pdf - our assigment file which added with the code to the teachers in the university, if u know hebrew u shall read it!
+
+# credits and special thanks
+to this below articales and videoes which gave us alot of material to proccess and work with to create our own algorithm.
+https://www.youtube.com/watch?v=siqiJAJWUVg&list=PLK8IOvtbwVssQ59IEL73S2ucQdTLiSZC6&index=2
+https://www.sciencedirect.com/science/article/pii/S2405896316302671
+https://www.researchgate.net/publication/220590321_Optimization_of_Group_Elevator_Scheduling_With_Advance_Information
+http://co-at-work.zib.de/berlin2009/downloads/2009-10-01/2009-10-01-1100-BH-Online-Optimization.pdf
+
+special thanks to Ofri Tavor, our class mate student, which guided us to create our own advanced tests.
+
  
