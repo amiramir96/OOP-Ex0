@@ -37,7 +37,6 @@ public class myElevatorAlgo implements ElevatorAlgo {
         double avgSpeed = speedCounter/this._building.numberOfElevetors();
         deltaFloor = (totalFloors *0.15);
         epsTime = 1 - avgSpeed/totalFloors*1.5;
-        System.out.println("deltaFloor is: "+deltaFloor+" and epsTime is: "+epsTime);
     }
 
     @Override

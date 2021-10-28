@@ -1,0 +1,226 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "ex0.algo.ElevatorAlgo"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_2996819 { 
+   	label=algo
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   DataCalls476122052[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DataCalls</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   data: ArrayList&lt;LinkedList&lt;Integer&gt;&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getElev(e: int): LinkedList&lt;Integer&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getSpecific(e: int, i: int): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isEmpty(e: int): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ nextStop(e: int): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ noOfStops(e: int): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ removeNextStop(e: int)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ElevatorAlgo476122052[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)ElevatorAlgo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getBuilding(): Building</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+ShabatElev2Algo476122052[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ShabatElev2Algo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   _direction: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- f0()</TD></TR>
+<TR><TD ALIGN="LEFT" >- f1(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- f2(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- rand(min: int, max: int): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ShabatElev3Algo476122052[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ShabatElev3Algo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   _direction: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   _firstTime: boolean[] [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- dist(src: int, elev: int): double</TD></TR>
+<TR><TD ALIGN="LEFT" >- f0()</TD></TR>
+<TR><TD ALIGN="LEFT" >- f1(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- f2(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- rand(min: int, max: int): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ShabatElevAlgo476122052[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ShabatElevAlgo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   _direction: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- rand(min: int, max: int): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+myElevatorAlgo476122052[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)myElevatorAlgo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   _dataCalls: DataCalls [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   cmdMatrix: int[][] [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   deltaFloor: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   epsTime: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- addOnlyIfNoDuplicates(idx: int, floorNum: int, eList: LinkedList&lt;Integer&gt;): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- allocateAnElevatorHelper(c: CallForElevator): int[]</TD></TR>
+<TR><TD ALIGN="LEFT" >- checkWhereToAddAtDataCalls(c: CallForElevator, elev: int): int[]</TD></TR>
+<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >- gimmeCurrIdxToPushDest(idxStart: int, destFloor: int, mission: int, elevPos: int, eList: LinkedList&lt;Integer&gt;): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- gimmeCurrIdxToPushSrc(srcFloor: int, mission: int, elevPos: int, eList: LinkedList&lt;Integer&gt;): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- inTheDirection(elev: int, mission: int, floor: int): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >- isBetweenForAllo(srcFloor: int, destFloor: int, potInsert: int): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >- isBetweenForCmd(srcFloor: int, destFloor: int, potInsert: int): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >- missionDirection(srcFloor: int, destFloor: int): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- sumOfFloors(elevator: Elevator, src: int, dest: int, stopCountTillSrc: int, stopCountTillDest: int): int</TD></TR>
+<TR><TD ALIGN="LEFT" >- timeToEndMission(elevator: Elevator, src: int, dest: int, whereToAddFloorSrcInt: int, whereToAddFloorDest: int, mission: int): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+ElevatorAlgo476122052 -> ShabatElev2Algo476122052[arrowhead=none, arrowtail=empty, dir=both];
+ElevatorAlgo476122052 -> ShabatElev3Algo476122052[arrowhead=none, arrowtail=empty, dir=both];
+ElevatorAlgo476122052 -> ShabatElevAlgo476122052[arrowhead=none, arrowtail=empty, dir=both];
+ElevatorAlgo476122052 -> myElevatorAlgo476122052[arrowhead=none, arrowtail=empty, dir=both];
+myElevatorAlgo476122052 -> DataCalls476122052[label="_dataCalls
+[0..1]"];
+    
+}
+@enduml

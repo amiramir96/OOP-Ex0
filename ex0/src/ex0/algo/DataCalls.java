@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class DataCalls {
-    private ArrayList<LinkedList<Integer>> data;
+    public ArrayList<LinkedList<Integer>> data;
 
     /**
      * Build array of lists to store next stops and access them quickly
