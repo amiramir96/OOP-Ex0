@@ -21,15 +21,34 @@
  # prioritization system:
  every call will move through several stages:
 1- get the input of the call
+
 2- check if there is elevator which respond to the next terms:
      2.a - the elevator is in idle state or in a state that equal to the type of the call
      2.b - if the elevator is not in idle state, check if the call source floor wont make the elevator to change its direction
+
 3- from all the elevators that respond to 2.a and 2.b, mark the elevator which his time is the best to complete the task in the earliest time
+
 4- check from the given elevators above, if there is an elevator that respond to the terms of Complicated Call, if yes - mark it in place.
+
 5- if we didnt find an optimal elevator yet, choose the elevator with the earliest time to complete the task
+
 6- allocate the task to the optimal elevator
  
  # complicated case
+ for a given building with n - floors and m - elevators and average speed (of all the elevators in the building) - s
+ if there is exist an elevator E which is not optimal via times, BUT, its close enough to the optimal elevator time till to the point of a parameter - name it epsilon_time
+ and E is also far enough from the optimal elevator route (amount of floors which have to be crossed till the source floor) till to the point of a parameter - name it delta_floor
+ then, E is defined as elevator which answer to the definition of complicated case.
+ 
+(a reminder - if a elevator is marked as complicated case, its shall replace the optimal elevator!)
+ 
+the thinking about this mechanic came from merging some army experience with the Monty Hall problem.
+
+// https://www.youtube.com/watch?v=iBdjqtR2iK4
+
+if we lose a small amount of time till the point of an epsilon parameter, but we gain much more smaller route the a given elevator, we shall take it because of the thinking that:
+
+we never look only on the present as the END, we shall always improve our position for the next step!
  
  # description
  the algorithm code is composed by two classes:
