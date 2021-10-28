@@ -1,0 +1,6 @@
+Elevator call,4.000000000,-1,2,0,-1
+Elevator call,10.000000000,2,4,0,-1
+Elevator call,14.000000000,-1,4,0,-1
+Elevator call,20.000000000,5,8,0,-1
+Elevator call,22.000000000,5,6,0,-1
+Elevator call,24.000000000,6,8,0,-1

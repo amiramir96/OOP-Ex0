@@ -38,6 +38,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         double avgSpeed = speedCounter/this._building.numberOfElevetors();
         deltaFloor = (totalFloors *0.15);
         epsTime = 1 - avgSpeed/totalFloors*1.5;
+        System.out.println("deltaFloor is: "+deltaFloor+" and epsTime is: "+epsTime);
     }
 
     @Override
@@ -50,7 +51,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         return "B-Team algo";
     }
 
-    @Override
+
     /**
      *     split to 2 options:
      *     1- mission type is for UP
@@ -64,6 +65,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      *          optimal[2] - ID of elevetor (point this way the elevetor and the currect list from dataCalls)
      * @return - ID of elevetor which shall will allocate the call
      */
+    @Override
     public int allocateAnElevator(CallForElevator c) {
         int[] optimal;
         optimal = allocateAnElevatorHelper(c);
@@ -347,6 +349,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         //intialize to run over eList
         tempSrc = eList.get(idxStart);
         tempDest = eList.get(idxStart+1);
+        idxStart++;
         /**
          * the logic terms!!!
          * we want to stand on the terms:

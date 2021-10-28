@@ -11,13 +11,13 @@ import ex0.simulator.Simulator_A;
  * starting to implement the algorithm.
  */
 public class Ex0_main {
-    public static Long ID0=123456789L, ID1 = null, ID2 = null;
+    public static Long ID0=316049311L, ID1 = 212458244L, ID2 = null;
     public static void main(String[] ar) {
         String codeOwner = codeOwner();
         Simulator_A.setCodeOwner(codeOwner);
-        int stage = 8;  // any case in [0,9].
+        int stage = 9;  // any case in [0,9].
         System.out.println("Ex0 Simulator: isStarting, stage="+stage+") ... =  ");
-        String callFile = null; // use the predefined cases [1-9].
+        String callFile = null;// use the predefined cases [1-9].'
         // String callFile = "data/Ex0_stage_2__.csv"; //
         Simulator_A.initData(stage, callFile);  // init the simulator data: {building, calls}.
 
@@ -41,8 +41,8 @@ public class Ex0_main {
 
     private static String codeOwner() {
         String owners = "insomnia / 2";
-        if(ID0!=null) {owners = "316049311"+ID0;}
-        if(ID1!=null) {owners += "212458244"+ID1;}
+        if(ID0!=null) {owners = ""+ID0;}
+        if(ID1!=null) {owners += ""+ID1;}
         if(ID2!=null) {owners += ","+ID2;}
         return owners;
     }
