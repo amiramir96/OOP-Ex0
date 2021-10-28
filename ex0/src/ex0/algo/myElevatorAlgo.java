@@ -14,9 +14,9 @@ public class myElevatorAlgo implements ElevatorAlgo {
      */
     private Building _building;
     private DataCalls _dataCalls;//data structure to hold the route of floors that every elevator shall do
-    double deltaFloor; //parameter for floors
-    double epsTime; //parameter for time
-    int[][] cmdMatrix; //used to store goto and stop locations
+    private double deltaFloor; //parameter for floors
+    private double epsTime; //parameter for time
+    private int[][] cmdMatrix; //used to store goto and stop locations
     /**
      * constructor, initialize the "brain" - the algorithm
      * @param b - building
