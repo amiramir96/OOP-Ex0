@@ -18,7 +18,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
     double epsTime; //paremeter for time
     int[][] cmdMatrix; //use to store goto and stop locations
     /**
-     * constructor, intialize the "brain" - the algorithem
+     * constructor, initialize the "brain" - the algorithm
      * @param b - building
      */
     public myElevatorAlgo(Building b) {
