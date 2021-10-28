@@ -92,7 +92,7 @@ class myElevatorAlgoTest {
         assertEquals(1, b.getElevetor(elev).getState()); //go to UP direction
         elev = check.allocateAnElevator(c2);
         check.cmdElevator(elev);
-        assertEquals(1, b.getElevetor(elev).getState()); //go to DOWN direction
+        assertEquals(1, b.getElevetor(elev).getState()); 
         elev = check.allocateAnElevator(c3);
         check.cmdElevator(elev);
         assertEquals(1, b.getElevetor(elev).getState());
@@ -101,6 +101,6 @@ class myElevatorAlgoTest {
         assertEquals(1, b.getElevetor(elev).getState());
         elev = check.allocateAnElevator(c7);
         check.cmdElevator(elev);
-        assertEquals(-1, b.getElevetor(elev).getState());
+        assertEquals(-1, b.getElevetor(elev).getState());//go to DOWN direction
     }
 }
