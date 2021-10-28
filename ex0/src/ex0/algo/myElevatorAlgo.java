@@ -2,21 +2,21 @@ package ex0.algo;
 import ex0.Building;
 import ex0.CallForElevator;
 import ex0.Elevator;
-import java.util.ArrayList;
+
 import java.util.LinkedList;
 
 public class myElevatorAlgo implements ElevatorAlgo {
     /**
-     * for dilema cases
-     * dependacncy on num of floors of the building
+     * for dilemma cases
+     * dependency on num of floors of the building
      * @param deltaFloor parameter floors to use
      * @param epsTime parameter time to use
      */
     private Building _building;
     private DataCalls _dataCalls;//data structure to hold the route of floors that every elevator shall do
     double deltaFloor; //parameter for floors
-    double epsTime; //paremeter for time
-    int[][] cmdMatrix; //use to store goto and stop locations
+    double epsTime; //parameter for time
+    int[][] cmdMatrix; //used to store goto and stop locations
     /**
      * constructor, initialize the "brain" - the algorithm
      * @param b - building
@@ -55,14 +55,14 @@ public class myElevatorAlgo implements ElevatorAlgo {
      *     split to 2 options:
      *     1- mission type is for UP
      *     2- mission type is for DOWN
-     *     get from the helper functions the ID number of elevetor which is optimal
-     * @param c - CallForElevetor:
+     *     get from the helper functions the ID number of elevator which is optimal
+     * @param c - CallForElevator:
      *          type mission: 1 for UP, -1 for DOWN
      * @optimal - hold the info:
      *          optimal[0] - idx to add there the src floor
      *          optimal[1] - idx to add there the dest floor
-     *          optimal[2] - ID of elevetor (point this way the elevetor and the currect list from dataCalls)
-     * @return - ID of elevetor which shall will allocate the call
+     *          optimal[2] - ID of elevator (point this way the elevator and the correct list from dataCalls)
+     * @return - ID of elevator which shall answer the call
      */
     @Override
     public int allocateAnElevator(CallForElevator c) {
@@ -76,35 +76,35 @@ public class myElevatorAlgo implements ElevatorAlgo {
     /**
      *the "Brain" of the algorithm.
      *hold 2 steps to prioritize via the helper main functions:
-     *1- elevators in the same "type" of mission OR elevetors in LEVEL state
+     *1- elevators in the same "type" of mission OR elevators in LEVEL state
      *2- all the elevators
-     *if we find at ea step even 1 elevetor relevant, func return ID of an elevator from that category
-     * @param c - CallForElevator the currect call which we trying to work on
-     * @elevToAlloc - ID elevator choosen to return
-     * @return optimal elevetor ID for this task.
+     *if we find at ea step even 1 elevator relevant, func return ID of an elevator from that category
+     * @param c - CallForElevator the correct call which we're trying to work on
+     * @elevToAlloc - ID elevator chosen to return
+     * @return optimal elevator ID for this task.
      */
     private int[] allocateAnElevatorHelper(CallForElevator c) {
-        //premitives
+        //primitives
         boolean foundElev = false; //way to know if to exit from func between the stages (1 and 2)
-        int floorDestIdxToAdd, floorSrcIdxToAdd; //will be used as indexes that represent where to add the floors from the callforelevetor
+        int floorDestIdxToAdd, floorSrcIdxToAdd; //will be used as indexes that represent where to add the floors from the calculator
         int src = c.getSrc(), dest = c.getDest(); //vars of source and dest floors
         int numOfElevators = this._building.numberOfElevetors();
-        double timeVal = Double.MAX_VALUE; //time needed to end task for choosen elevator
+        double timeVal = Double.MAX_VALUE; //time needed to end task for chosen elevator
         int timeOpt = Integer.MAX_VALUE; //for COMPLICATED CASE check
         double timeTemp;
         //more complex
         int[] whereToAddAtDataCalls = new int[2];
         int[] outputArr = new int[3];
-        int[][] allocateMatrix = new int[numOfElevators][3]; //use to store goto and stop locations and time to end task for that elev
+        int[][] allocateMatrix = new int[numOfElevators][3]; //used to store goto and stop locations and time to end task for that elev
         Elevator tempElev;
 
-        //first case - check all elevetors which in UP mission OR LEVEL mission, saving the optimal if exists
+        //first case - check all elevators which in UP mission OR LEVEL mission, saving the optimal if exists
         for (int i=0; i < numOfElevators; i++){
             tempElev = this._building.getElevetor(i);
-            //mission is up so "good" case is only when elevetor position is BELOW the source target
+            //mission is up so "good" case is only when elevator position is BELOW the source target
             if (tempElev.getState() == 0 || tempElev.getState() == c.getType() && inTheDirection(i, c.getType(), src)){
                 //get info - potential idx to add at the linked list and time to end mission
-                whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+                whereToAddAtDataCalls = checkWhereToAddAtDataCalls(c, i);
                 timeTemp = timeToEndMission(tempElev, src, dest, whereToAddAtDataCalls[0], whereToAddAtDataCalls[1], c.getType());
                 //save the info at the whole matrix
                 allocateMatrix[i][0] = whereToAddAtDataCalls[0];
@@ -129,7 +129,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
             if (epsTime * allocateMatrix[e][2] > 0 && timeVal >= epsTime * allocateMatrix[e][2] && outputArr[0] > 0 && allocateMatrix[e][0] > 0 &&
                     Math.abs(src - _dataCalls.getSpecific(outputArr[2],outputArr[0] - 1)) > Math.abs(src - _dataCalls.getSpecific(e,allocateMatrix[e][0] - 1)) + deltaFloor) {
                 //take the best case via times (from the elev that got through the COMPLICATED CASE terms)
-                //mostly wont happen
+                //mostly won't happen
                 if (timeOpt > allocateMatrix[e][2]) {
                     timeOpt = allocateMatrix[e][2];
                     outputArr[0] = allocateMatrix[e][0];
@@ -147,7 +147,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         for (int i=0; i < numOfElevators; i++){
             tempElev = this._building.getElevetor(i);
             //get info - potential idx to add at the linked list and time to end mission
-            whereToAddAtDataCalls = checkWhereToaddAtDataCalls(c, i);
+            whereToAddAtDataCalls = checkWhereToAddAtDataCalls(c, i);
             timeTemp = timeToEndMission(tempElev, src, dest, whereToAddAtDataCalls[0], whereToAddAtDataCalls[1], c.getType());
             //save the info at the whole matrix
             allocateMatrix[i][0] = whereToAddAtDataCalls[0];
@@ -170,7 +170,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
             if (epsTime * allocateMatrix[e][2] > 0 && timeVal >= epsTime * allocateMatrix[e][2] && outputArr[0] > 0 && allocateMatrix[e][0] > 0 &&
                     Math.abs(src - _dataCalls.getSpecific(outputArr[2],outputArr[0] - 1)) > Math.abs(src - _dataCalls.getSpecific(e,allocateMatrix[e][0] - 1)) + deltaFloor) {
                 //take the best case via times (from the elev that got through the COMPLICATED CASE terms)
-                //mostly wont happen
+                //mostly won't happen
                 if (timeOpt > allocateMatrix[e][2]) {
                     timeOpt = allocateMatrix[e][2];
                     outputArr[0] = allocateMatrix[e][0];
@@ -183,12 +183,12 @@ public class myElevatorAlgo implements ElevatorAlgo {
     }
 
     /**
-     * check if the checked floor is in the direction of the elevetor movement
-     * if elevetor state is UP so we look for floor that higher than the elev
+     * check if the checked floor is in the direction of the elevator movement
+     * if elevator state is UP, so we look for floor that higher than the elev
      * if .... state is DOWN ................ floor that lower than the elev
      * @param elev - ID num!
-     * @param mission - type of mission from the CALLFORELEVETOR obj, 1 for UP, -1 for DOWN
-     * @param floor - the checken floor
+     * @param mission - type of mission from the CallForElevator obj, 1 for UP, -1 for DOWN
+     * @param floor - the checked floor
      * @return
      */
     private boolean inTheDirection(int elev, int mission, int floor){
@@ -204,34 +204,34 @@ public class myElevatorAlgo implements ElevatorAlgo {
     }
 
     /**
-     * cal approximate wait and movement time - togheter == the output time
-     * @param elevator - choosen elevator to calculate it time to end the task
+     * cal approximate wait and movement time - together == the output time
+     * @param elevator - chosen elevator to calculate it time to end the task
      * @param src - src floor of the task
      * @param dest - dest floor of the task
-//   * @param howManyStops - amount of stops depend on the index where we gonna add the "src floor" and the "dest floor" from the call
+//   * @param howManyStops - amount of stops depend on the index where we're going to add the "src floor" and the "dest floor" from the call
      * @param mission - task direction: UP = 1, DOWN = -1
-     * @return time to End the Task for the elevator via the options writened before
+     * @return time to End the Task for the elevator via the options written before
      */
-    private double timeToEndMission(Elevator elevator, int src, int dest, int whereToAddfloorSrcint, int whereToAddfloorDest, int mission) {
+    private double timeToEndMission(Elevator elevator, int src, int dest, int whereToAddFloorSrcInt, int whereToAddFloorDest, int mission) {
         int amountOfStops = 0;
         double approximateMoveTime, approximateWaitTime;
         //approximateMoveTime is all the movement between floors (sigma of all nodes from curr position
         //to the "how many stops" index
-        approximateMoveTime = sumOfFloors(elevator, src, dest,whereToAddfloorSrcint, whereToAddfloorDest) / elevator.getSpeed();
-        //approximateWaitTime is all parameters that gonna delay the movement in summery, multiply num of stops
-        //whereToAddfloorDest == how many stops along the road
-        approximateWaitTime = whereToAddfloorDest * (elevator.getTimeForClose() + elevator.getTimeForOpen() + elevator.getStopTime() + elevator.getStartTime());
+        approximateMoveTime = sumOfFloors(elevator, src, dest,whereToAddFloorSrcInt, whereToAddFloorDest) / elevator.getSpeed();
+        //approximateWaitTime is all parameters that going to delay the movement in summery, multiply num of stops
+        //whereToAddFloorDest == how many stops along the road
+        approximateWaitTime = whereToAddFloorDest * (elevator.getTimeForClose() + elevator.getTimeForOpen() + elevator.getStopTime() + elevator.getStartTime());
         return approximateMoveTime + approximateWaitTime;
     }
 
     /**
-     * summerize absolute number of floors that the elevertor gonna go through
-     * example: if the elevetor position is 1 and the dest floor is 10, but there is few missions before this tasks
+     * summarize absolute number of floors that the elevator going to go through
+     * example: if the elevator position is 1 and the dest floor is 10, but there is few missions before this tasks
      *             which is: going to floor 7 than to floor 3
      *             the sumOf floors returns: 1->7->3->10 => 6+4+7 = 17
-     * @param elevator - relevant elevetor
+     * @param elevator - relevant elevator
      * @param dest
-     * @param stopCountTillSrc - idx - where we shall add the srcFloor of the task => means thats the position which we shall count till..
+     * @param stopCountTillSrc - idx - where we shall add the srcFloor of the task => means that's the position which we shall count till.
      * @param stopCountTillDest - same as above, just with the destFloor
      * @return
      */
@@ -255,7 +255,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
                     tempDest = _dataCalls.getSpecific(id,i);
                 }
                 else {
-                    break; //have no point to forwarding the i idx since the loop will be end;
+                    break; //have no point to forwarding the i idx since the loop will end;
                 }
             }
             //add the floors between last addition floor, to the src floor
@@ -272,7 +272,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
                     j++;
                 }
                 else {
-                    break; //have no point to forwarding the i idx since the loop will be end;
+                    break; //have no point to forwarding the i idx since the loop will end;
                 }
             }
             sum += Math.abs(tempDest - dest);
@@ -281,25 +281,25 @@ public class myElevatorAlgo implements ElevatorAlgo {
         return sum;
     }
     /**
-     * checking : IF we will decide on the curr elevetor to accomplish the task
+     * checking : IF we will decide on the curr elevator to accomplish the task
      * => what is the indexes that we shall add at the src and dest floors of the Call
-     * @param c - task of elevetor
-     * @param elev - choosen elevator as optimal which will execute the mission
+     * @param c - task of elevator
+     * @param elev - chosen elevator as optimal which will execute the mission
      */
-    private int[] checkWhereToaddAtDataCalls(CallForElevator c, int elev) {
+    private int[] checkWhereToAddAtDataCalls(CallForElevator c, int elev) {
         Elevator e = this._building.getElevetor(elev);
         int i,j; //indexes, i for src, j for dest
 
-        //pointer to LinkedList<Integer> that holds all the calls for elev as arrenged list
+        //pointer to LinkedList<Integer> that holds all the calls for elev as arranged list
         LinkedList<Integer> eList = _dataCalls.getElev(elev);
-        //1st case elevetor dataCalls list is empty so - add instantly.
+        //1st case elevator dataCalls list is empty so - add instantly.
         if (eList.isEmpty()) {
             i = 0;
             j = 1;
             int[] output = {i, j};
             return output;
         }
-        //initialize vars to hold the 2 floors that gonna be chacked
+        //initialize vars to hold the 2 floors that going to be checked
         int tempSrc = e.getPos();
         int tempDest = eList.getFirst();
         //2nd - other specific case - the size of list that hold the "route" that the elev shall move through hold only 1 floor inside
@@ -329,7 +329,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
     }
 
     /**
-     * the func returns idx for eList that represent => if we gonna add the task to this elevetor, where shall we add it?
+     * the func returns idx for eList that represent => if we're going to add the task to this elevator, where shall we add it?
      * @param srcFloor of the callForElevator
      * @param mission of the callForElevator
      * @param elevPos curr floor of the relevant elevator
@@ -337,7 +337,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      * @return int - idx for eList
      */
     private int gimmeCurrIdxToPushSrc(int srcFloor, int mission, int elevPos, LinkedList<Integer> eList){
-        //var intialize to start checks
+        //var initialize to start checks
         int tempSrc = elevPos;
         int tempDest = eList.getFirst();
         int idxStart = 0; //start of the route
@@ -345,7 +345,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         if (isBetweenForAllo(tempSrc, tempDest, srcFloor) && missionDirection(tempSrc, tempDest) == mission){
                 return idxStart;
         }
-        //intialize to run over eList
+        //initialize to run over eList
         tempSrc = eList.get(idxStart);
         tempDest = eList.get(idxStart+1);
         idxStart++;
@@ -354,9 +354,9 @@ public class myElevatorAlgo implements ElevatorAlgo {
          * we want to stand on the terms:
          * 1- do not get idxOutOfBound exception
          * 2- elev state and call type is same
-         * 3- the item is between two nodes so its the BEST place xD (being asakura Yoh the shaman king nakama is the best place!!!)
+         * 3- the item is between two nodes, so it's the BEST place xD (being asakura Yoh the shaman king nakama is the best place!!!)
          */
-        //keep run as long as even one of the 3 terms is not achived
+        //keep run as long as even one of the 3 terms is not achieved
         while (idxStart < eList.size() &&
                 !(missionDirection(tempSrc, tempDest) == mission && isBetweenForAllo(tempSrc, tempDest, srcFloor))){
             tempSrc = tempDest;
@@ -370,7 +370,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
     }
 
     /**
-     * the func returns idx for eList that represent => if we gonna add the task to this elevetor, where shall we add it?
+     * the func returns idx for eList that represent => if we're going to add the task to this elevator, where shall we add it?
      * @param idxStart where shall we start our check, ATTENTION!!! any previous value is BEFORE the src floor, and now we look for place for the Dest which is for sure AFTER
      * @param destFloor of the callForElevator
      * @param mission of the callForElevator
@@ -379,7 +379,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      * @return int - idx for eList
      */
     private int gimmeCurrIdxToPushDest(int idxStart, int destFloor, int mission, int elevPos, LinkedList<Integer> eList){
-        //intialize vars
+        //initialize vars
         int tempSrc = elevPos;
         int tempDest = eList.getFirst();
         //check edges of the curr ROUTE
@@ -416,7 +416,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
          * 4- the item shall be LOWER or SAME the tempDest var (this way we never Cross a higher floor)
          * for DOWN mission is the same terms but 3 and 4 is opposite in the meanings of higher/lower
          */
-        //keep run as long as even one of the 3 terms is not achived
+        //keep run as long as even one of the 3 terms is not achieved
         if (mission == 1){
             while (idxStart <= eList.size() &&
                     missionDirection(tempSrc, tempDest) == 1 && tempSrc < destFloor && !(destFloor <= tempDest)){
@@ -443,7 +443,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         }
     }
     /**
-     * add a num to linkedList<Integer> ONLY if not a duplicate
+     * add a num to linkedList<Integer> ONLY if not a duplicate.
      * duplicate means => after added if the value at idx-1 OR the value at idx+1 is SAME (ONLY one of them is enough)
      * @param idx where to add
      * @param floorNum - value to add
@@ -507,7 +507,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      * @param srcFloor
      * @param destFloor
      * @param potInsert
-     * @return boolean..
+     * @return boolean.
      */
     private boolean isBetweenForAllo(int srcFloor, int destFloor, int potInsert){
         if (srcFloor >= potInsert && potInsert > destFloor){
@@ -519,7 +519,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
     /**
      * use goto command while the elev is at LEVEL state
      * use stop command while the elev is on the move
-     * goto and stop cmmands ALWAYS getting into used on the FIRST item at dataCall.get(elev) linked list
+     * goto and stop commands ALWAYS getting into used on the FIRST item at dataCall.get(elev) linked list
      * @param elev the current Elevator index on which the operation is performs.
      */
     @Override
@@ -533,10 +533,10 @@ public class myElevatorAlgo implements ElevatorAlgo {
             return;
         }
         //if elev got to the first floor in the list -> we shall remove it
-        //also solve unique situtaion - elev starts the simulation in this floor so we shall tell her to open doors
+        //also solve unique situation - elev starts the simulation in this floor, so we shall tell her to open doors
         else if (_dataCalls.nextStop(elev) == e.getPos()) {
                 this.cmdMatrix[elev][1] = _dataCalls.nextStop(elev); //hold the stop floor mission
-                _dataCalls.removeNextStop(elev); //remove the irrelevant floor from the datacalls structure
+                _dataCalls.removeNextStop(elev); //remove the irrelevant floor from the _datacalls structure
                 e.stop(this.cmdMatrix[elev][1]);
             //check now if list isEmpty so we shall return;
             if (_dataCalls.isEmpty(elev)) {
@@ -575,7 +575,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      * check if potential floor that we would like to stop at is between two input floors
      * @param srcFloor - e.pos
      * @param destFloor - the curr floor which is the stop floor at the cmdMatrix
-     * @param potInsert - checken floor
+     * @param potInsert - checked floor
      * @return boolean
      */
     private boolean isBetweenForCmd(int srcFloor, int destFloor, int potInsert){
