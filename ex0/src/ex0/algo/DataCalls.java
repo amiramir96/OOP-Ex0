@@ -13,6 +13,7 @@ public class DataCalls {
      * @param b the building of the elevators
      */
     public DataCalls(Building b){
+        data = new ArrayList<LinkedList<Integer>>();
         for(int i=0; i < b.numberOfElevetors(); i++){
             data.add(new LinkedList<Integer>());
         }
@@ -23,7 +24,7 @@ public class DataCalls {
      * @param e elevator ID
      * @return next stop fot elevator e
      */
-    public int getNext(int e){
+    public int nextStop(int e){
         return data.get(e).getFirst();
     }
 
@@ -31,7 +32,7 @@ public class DataCalls {
      * remove next stop (usually after finishing mission)
      * @param e elevator ID
      */
-    public void removeNext(int e){
+    public void removeNextStop(int e){
         data.get(e).removeFirst();
         return;
     }
@@ -53,6 +54,15 @@ public class DataCalls {
      */
     public boolean isEmpty(int e){
         return data.get(e).isEmpty();
+    }
+
+    /**
+     * how many stops does the elevator has
+     * @param e elevator ID
+     * @return number of stops in the list
+     */
+    public int noOfStops (int e){
+        return data.get(e).size();
     }
 
     /**

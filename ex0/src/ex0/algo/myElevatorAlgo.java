@@ -13,7 +13,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      * @param epsTime parameter time to use
      */
     private Building _building;
-    private ArrayList<LinkedList<Integer>> dataCalls; //dataStructre to hold the route of floors that every elevetor shall do
+    private DataCalls _dataCalls;//data structure to hold the route of floors that every elevator shall do
     double deltaFloor; //parameter for floors
     double epsTime; //paremeter for time
     int[][] cmdMatrix; //use to store goto and stop locations
@@ -23,12 +23,11 @@ public class myElevatorAlgo implements ElevatorAlgo {
      */
     public myElevatorAlgo(Building b) {
         _building = b;
-        dataCalls = new ArrayList<LinkedList<Integer>>(b.numberOfElevetors());
+        _dataCalls=new DataCalls(b);
         int speedCounter = 0;
         int totalFloors = Math.abs(this._building.maxFloor() - this._building.minFloor());
         cmdMatrix = new int[this._building.numberOfElevetors()][3];
         for(int i=0; i < b.numberOfElevetors(); i++){
-            this.dataCalls.add(new LinkedList<Integer>());
             speedCounter += this._building.getElevetor(i).getSpeed();
             cmdMatrix[i][0] = Integer.MIN_VALUE;
             cmdMatrix[i][1] = Integer.MIN_VALUE;
@@ -69,8 +68,8 @@ public class myElevatorAlgo implements ElevatorAlgo {
     public int allocateAnElevator(CallForElevator c) {
         int[] optimal;
         optimal = allocateAnElevatorHelper(c);
-        addOnlyIfNoDuplicates(optimal[1], c.getDest(), this.dataCalls.get(optimal[2]));
-        addOnlyIfNoDuplicates(optimal[0], c.getSrc(), this.dataCalls.get(optimal[2]));
+        addOnlyIfNoDuplicates(optimal[1], c.getDest(), _dataCalls.getElev(optimal[2]));
+        addOnlyIfNoDuplicates(optimal[0], c.getSrc(), _dataCalls.getElev(optimal[2]));
         return optimal[2];
     }
 
@@ -123,19 +122,19 @@ public class myElevatorAlgo implements ElevatorAlgo {
             }
         }
 
-        for (int i=0; i < numOfElevators; i++) {
+        for (int e=0; e < numOfElevators; e++) {
             //check if there is in overall a better elev via delta and epsilon param
             //look at readme / algo description to understand accurately
             //this question checks if this is COMPLICATED CASE!
-            if (epsTime * allocateMatrix[i][2] > 0 && timeVal >= epsTime * allocateMatrix[i][2] && outputArr[0] > 0 && allocateMatrix[i][0] > 0 &&
-                    Math.abs(src - this.dataCalls.get(outputArr[2]).get(outputArr[0] - 1)) > Math.abs(src - this.dataCalls.get(i).get(allocateMatrix[i][0] - 1)) + deltaFloor) {
+            if (epsTime * allocateMatrix[e][2] > 0 && timeVal >= epsTime * allocateMatrix[e][2] && outputArr[0] > 0 && allocateMatrix[e][0] > 0 &&
+                    Math.abs(src - _dataCalls.getSpecific(outputArr[2],outputArr[0] - 1)) > Math.abs(src - _dataCalls.getSpecific(e,allocateMatrix[e][0] - 1)) + deltaFloor) {
                 //take the best case via times (from the elev that got through the COMPLICATED CASE terms)
                 //mostly wont happen
-                if (timeOpt > allocateMatrix[i][2]) {
-                    timeOpt = allocateMatrix[i][2];
-                    outputArr[0] = allocateMatrix[i][0];
-                    outputArr[1] = allocateMatrix[i][1];
-                    outputArr[2] = i;
+                if (timeOpt > allocateMatrix[e][2]) {
+                    timeOpt = allocateMatrix[e][2];
+                    outputArr[0] = allocateMatrix[e][0];
+                    outputArr[1] = allocateMatrix[e][1];
+                    outputArr[2] = e;
 
                 }
             }
@@ -164,19 +163,19 @@ public class myElevatorAlgo implements ElevatorAlgo {
             }
         }
 
-        for (int i=0; i < numOfElevators; i++) {
+        for (int e=0; e < numOfElevators; e++) {
             //check if there is in overall a better elev via delta and epsilon param
             //look at readme / algo description to understand accurately
             //this question checks if this is COMPLICATED CASE!
-            if (epsTime * allocateMatrix[i][2] > 0 && timeVal >= epsTime * allocateMatrix[i][2] && outputArr[0] > 0 && allocateMatrix[i][0] > 0 &&
-                    Math.abs(src - this.dataCalls.get(outputArr[2]).get(outputArr[0] - 1)) > Math.abs(src - this.dataCalls.get(i).get(allocateMatrix[i][0] - 1)) + deltaFloor) {
+            if (epsTime * allocateMatrix[e][2] > 0 && timeVal >= epsTime * allocateMatrix[e][2] && outputArr[0] > 0 && allocateMatrix[e][0] > 0 &&
+                    Math.abs(src - _dataCalls.getSpecific(outputArr[2],outputArr[0] - 1)) > Math.abs(src - _dataCalls.getSpecific(e,allocateMatrix[e][0] - 1)) + deltaFloor) {
                 //take the best case via times (from the elev that got through the COMPLICATED CASE terms)
                 //mostly wont happen
-                if (timeOpt > allocateMatrix[i][2]) {
-                    timeOpt = allocateMatrix[i][2];
-                    outputArr[0] = allocateMatrix[i][0];
-                    outputArr[1] = allocateMatrix[i][1];
-                    outputArr[2] = i;
+                if (timeOpt > allocateMatrix[e][2]) {
+                    timeOpt = allocateMatrix[e][2];
+                    outputArr[0] = allocateMatrix[e][0];
+                    outputArr[1] = allocateMatrix[e][1];
+                    outputArr[2] = e;
                 }
             }
         }
@@ -240,20 +239,20 @@ public class myElevatorAlgo implements ElevatorAlgo {
         int sum = 0;
         int tempSrc = elevator.getPos();
         int id = elevator.getID();
-        if (this.dataCalls.get(id).size() == 0){
+        if (_dataCalls.isEmpty(id)){
             sum = sum + Math.abs(tempSrc - src) + Math.abs(src - dest);
             return sum;
         }
         else {
             //route till the src floor
             int i=0;
-            int tempDest = this.dataCalls.get(id).get(i);
+            int tempDest = _dataCalls.getSpecific(id,i);
             while(i < stopCountTillSrc){
                 sum += Math.abs(tempSrc - tempDest);
                 if (i+1 < stopCountTillSrc){
                     i++;
                     tempSrc = tempDest;
-                    tempDest = this.dataCalls.get(id).get(i);
+                    tempDest = _dataCalls.getSpecific(id,i);
                 }
                 else {
                     break; //have no point to forwarding the i idx since the loop will be end;
@@ -265,11 +264,11 @@ public class myElevatorAlgo implements ElevatorAlgo {
             sum += Math.abs(tempSrc - tempDest);
             int j = stopCountTillSrc;
             //route from src floor till the dest floor
-            while  (j < stopCountTillDest && j < this.dataCalls.get(id).size()){
+            while  (j < stopCountTillDest && j < _dataCalls.noOfStops(id)){
                 tempSrc = tempDest;
-                tempDest = this.dataCalls.get(id).get(j);
+                tempDest = _dataCalls.getSpecific(id,j);
                 sum += Math.abs(tempSrc - tempDest);
-                if (j+1 < stopCountTillDest && j+1 < this.dataCalls.get(id).size()){
+                if (j+1 < stopCountTillDest && j+1 < _dataCalls.noOfStops(id)){
                     j++;
                 }
                 else {
@@ -292,7 +291,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
         int i,j; //indexes, i for src, j for dest
 
         //pointer to LinkedList<Integer> that holds all the calls for elev as arrenged list
-        LinkedList<Integer> eList = this.dataCalls.get(elev);
+        LinkedList<Integer> eList = _dataCalls.getElev(elev);
         //1st case elevetor dataCalls list is empty so - add instantly.
         if (eList.isEmpty()) {
             i = 0;
@@ -527,7 +526,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
     public void cmdElevator(int elev) {
         Elevator e = this._building.getElevetor(elev);
         //list is empty
-        if (this.dataCalls.get(elev).isEmpty()) { //zeroing our monitoring matrix
+        if (_dataCalls.isEmpty(elev)) { //zeroing our monitoring matrix
             this.cmdMatrix[elev][0] = Integer.MIN_VALUE;
             this.cmdMatrix[elev][1] = Integer.MIN_VALUE;
             this.cmdMatrix[elev][2] = 0;
@@ -535,37 +534,37 @@ public class myElevatorAlgo implements ElevatorAlgo {
         }
         //if elev got to the first floor in the list -> we shall remove it
         //also solve unique situtaion - elev starts the simulation in this floor so we shall tell her to open doors
-        else if (this.dataCalls.get(elev).getFirst() == e.getPos()) {
-                this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst(); //hold the stop floor mission
-                this.dataCalls.get(elev).removeFirst(); //remove the irrelevant floor from the datacalls structure
+        else if (_dataCalls.nextStop(elev) == e.getPos()) {
+                this.cmdMatrix[elev][1] = _dataCalls.nextStop(elev); //hold the stop floor mission
+                _dataCalls.removeNextStop(elev); //remove the irrelevant floor from the datacalls structure
                 e.stop(this.cmdMatrix[elev][1]);
             //check now if list isEmpty so we shall return;
-            if (this.dataCalls.get(elev).isEmpty()) {
+            if (_dataCalls.isEmpty(elev)) {
                 return;
             }
             else {
-                this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst();
+                this.cmdMatrix[elev][1] = _dataCalls.nextStop(elev);
             }
         }
         //for LEVEL state - use goto command
         if (e.getState() == 0) {
-            e.goTo(this.dataCalls.get(elev).getFirst());
-            this.cmdMatrix[elev][0] = this.dataCalls.get(elev).getFirst();
-            this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst();
+            e.goTo(_dataCalls.nextStop(elev));
+            this.cmdMatrix[elev][0] = _dataCalls.nextStop(elev);
+            this.cmdMatrix[elev][1] = _dataCalls.nextStop(elev);
             this.cmdMatrix[elev][2] = 0; //start new chain of missions, switch off!
         }
         //while UP or DOWN state - use stop command
         else {
             //curr stop or goto floors is already in our monitoring matrix
-            if (this.cmdMatrix[elev][1] == this.dataCalls.get(elev).getFirst()
-                    || this.cmdMatrix[elev][0] == this.dataCalls.get(elev).getFirst()){
+            if (this.cmdMatrix[elev][1] == _dataCalls.nextStop(elev)
+                    || this.cmdMatrix[elev][0] == _dataCalls.nextStop(elev)){
                 this.cmdMatrix[elev][2] = 0;
             }
             //value from dataCalls can be pushed to stop before the curr value at our monitoring matrix
             //shall send command to stop there and edit the new stop floor at monitoring matrix
-            else if(isBetweenForCmd(e.getPos(), this.cmdMatrix[elev][1], this.dataCalls.get(elev).getFirst())){
-                e.stop(this.dataCalls.get(elev).getFirst());
-                this.cmdMatrix[elev][1] = this.dataCalls.get(elev).getFirst();
+            else if(isBetweenForCmd(e.getPos(), this.cmdMatrix[elev][1], _dataCalls.nextStop(elev))){
+                e.stop(_dataCalls.nextStop(elev));
+                this.cmdMatrix[elev][1] = _dataCalls.nextStop(elev);
                 this.cmdMatrix[elev][2] = 0;
             }
         }
