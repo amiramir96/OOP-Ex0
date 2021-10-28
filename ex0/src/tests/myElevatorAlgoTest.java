@@ -1,6 +1,6 @@
 package tests;
 
-import ex0.algo.myElevatorAlgo;
+import ex0.algo.MyElevatorAlgo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,7 +20,7 @@ class myElevatorAlgoTest {
             allElev[i] = new ElevetorForTest(i+1, 2,3,i);
         }
         BuildingForTest b = new BuildingForTest("kanGarimBekef", -10, 100, allElev);
-        myElevatorAlgo check = new myElevatorAlgo(b);
+        MyElevatorAlgo check = new MyElevatorAlgo(b);
         assertEquals(b, check.getBuilding());
     }
 
@@ -30,7 +30,7 @@ class myElevatorAlgoTest {
             allElev[i] = new ElevetorForTest(i+1, 2,3,i);
         }
         BuildingForTest b = new BuildingForTest("kanGarimBekef", -10, 100, allElev);
-        myElevatorAlgo check = new myElevatorAlgo(b);
+        MyElevatorAlgo check = new MyElevatorAlgo(b);
         assertEquals("B-Team algo", check.algoName());
     }
 
@@ -44,7 +44,7 @@ class myElevatorAlgoTest {
             allElev[i] = new ElevetorForTest(i+1, 2,3,i);
         }
         BuildingForTest b = new BuildingForTest("kanGarimBekef", -10, 100, allElev);
-        myElevatorAlgo check = new myElevatorAlgo(b);
+        MyElevatorAlgo check = new MyElevatorAlgo(b);
         int elev = check.allocateAnElevator(c1);
         assertEquals(3, elev);
         elev = check.allocateAnElevator(c2);
@@ -64,7 +64,7 @@ class myElevatorAlgoTest {
         for (int i=0; i < allElev.length; i++){
             allElev[i] = new ElevetorForTest((i+1)*2, 2,3,i);
         }
-        myElevatorAlgo check2 = new myElevatorAlgo(b);
+        MyElevatorAlgo check2 = new MyElevatorAlgo(b);
         elev = check2.allocateAnElevator(c6);
         assertEquals(3, elev);
         elev = check2.allocateAnElevator(c2);
@@ -86,7 +86,7 @@ class myElevatorAlgoTest {
             allElev[i] = new ElevetorForTest(i+1, 2,3,i);
         }
         BuildingForTest b = new BuildingForTest("kanGarimBekef", -10, 100, allElev);
-        myElevatorAlgo check = new myElevatorAlgo(b);
+        MyElevatorAlgo check = new MyElevatorAlgo(b);
         int elev = check.allocateAnElevator(c1);
         check.cmdElevator(elev);
         assertEquals(1, b.getElevetor(elev).getState()); //go to UP direction

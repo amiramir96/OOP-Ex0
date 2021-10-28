@@ -1,9 +1,7 @@
 package ex0;
 
 import ex0.algo.ElevatorAlgo;
-import ex0.algo.ShabatElev3Algo;
-import ex0.algo.ShabatElevAlgo;
-import ex0.algo.myElevatorAlgo;
+import ex0.algo.MyElevatorAlgo;
 import ex0.simulator.Simulator_A;
 
 /**
@@ -22,7 +20,7 @@ public class Ex0_main {
         Simulator_A.initData(stage, callFile);  // init the simulator data: {building, calls}.
 
 
-        ElevatorAlgo ex0_alg = new myElevatorAlgo(Simulator_A.getBuilding());
+        ElevatorAlgo ex0_alg = new MyElevatorAlgo(Simulator_A.getBuilding());
 
 //          ElevatorAlgo ex0_alg = new ShabatElevAlgo(Simulator_A.getBuilding());  // The simplest algo ever (Shabat Elev).
 //        ElevatorAlgo ex0_alg = new ShabatElev2Algo(Simulator_A.getBuilding()); // Shabat Elev with a minor twist

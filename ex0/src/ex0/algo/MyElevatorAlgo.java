@@ -5,7 +5,7 @@ import ex0.Elevator;
 
 import java.util.LinkedList;
 
-public class myElevatorAlgo implements ElevatorAlgo {
+public class MyElevatorAlgo implements ElevatorAlgo {
     /**
      * for dilemma cases
      * dependency on num of floors of the building
@@ -21,7 +21,7 @@ public class myElevatorAlgo implements ElevatorAlgo {
      * constructor, initialize the "brain" - the algorithm
      * @param b - building
      */
-    public myElevatorAlgo(Building b) {
+    public MyElevatorAlgo(Building b) {
         _building = b;
         _dataCalls=new DataCalls(b);
         int speedCounter = 0;
