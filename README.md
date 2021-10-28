@@ -1,15 +1,15 @@
 # OOP Ex0
- our project refers to elevator problem, to create an algorithm which provides allocate and commands to an "smart" elevator system, and optimize overall time of calls 
- ~definition overall time - time that takes since the client input his destination floor (from another given floor)
+ Our project refers to elevator problem, to create an algorithm which allocates and commands "smart" elevator system, and optimize overall time of calls.  
+ ~definition overall time := time that takes since the client requested a ride until he reached his destination.
  
  # the main problem
- the old generation of elevator systems is not designed to be sufficient to an high and complex building, neighter to handle with more than 2 elevators in the same time
- in the present, high towers is towering to dozens and even more than a hundred floors and contains 6, 10, and even more elevators in the building
- along the planning phase we had to face with the next several main challenge:
- 1- STARVATION - an occasion which client is waiting "forever" or in another words, the client have to call again to an elevator because his call had been deleted/will never pop up in the priority of elevator. => in diffrent from small buildings where starvation meaning is few little mins, at towers, starvation could express in 15, 20 and even half hour.
- 2- prioritize calls in a consistent way but to avoid from employ the elevators as "shabat elevators" along the OVERLOAD times which means to stop at every floor till the top of the tower and than move back down, again, stopping at each floor over and over again.
- 3- the algorithm have to be balanced and robustic as much as possible since we dont know the details of the building (num of elevators, their details, building floors) and the input building can be any realistic case.
- 4- the programme shall run in a linear time, dependant on num of elevators, calls, and floors, or at least polynomial time with a "small" power, BUT avoid from exponential time running.
+ The old generation of elevator systems is not designed to be sufficient to a high and complex building, nor to handle more than 2 elevators at the same time.  
+ Nowadays, high towers is towering to dozens and even more than a hundred floors and contains 6, 10, and even more elevators in the building.  
+ During the planning phase we faced with several main challenge:
+ 1- STARVATION - an occasion in which a client is waiting "forever". In another words, the client have to call again to an elevator because his call had been deleted/ will never  be answered. => unlike small buildings, where starvation usually takes a few minutes, at towers, starvation could take  15, 20 minutes and even half an hour.  
+ 2- Prioritize calls in a consistent way but to avoid employing the elevators as "shabat elevators" at OVERLOAD times, which means to stop at every floor up to the top of the tower and then move back down, stopping at each floor again.
+ 3- The algorithm have to be balanced and robust as much as possible since we don't know the details of the building (number of elevators, their details, building height) and the building we will work on can be any realistic case.
+ 4- The programme shall run in a linear time, dependant on num of elevators, calls, and floors, or at least polynomial time with a "small" power, BUT avoid from exponential time running.
  
  # ways to contest with the problems
  // nums represent - an answer to the i problem which represented above.
