@@ -120,77 +120,15 @@ ElevatorAlgo476122052[
 	fillcolor="#F1E5FD"
 ];
 
-ShabatElev2Algo476122052[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)ShabatElev2Algo</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >-   _direction: int [1]</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
-<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
-<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >- f0()</TD></TR>
-<TR><TD ALIGN="LEFT" >- f1(elev: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >- f2(elev: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >- rand(min: int, max: int): int</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-ShabatElev3Algo476122052[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)ShabatElev3Algo</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >-   _direction: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >-   _firstTime: boolean[] [0..*]</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
-<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
-<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >- dist(src: int, elev: int): double</TD></TR>
-<TR><TD ALIGN="LEFT" >- f0()</TD></TR>
-<TR><TD ALIGN="LEFT" >- f1(elev: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >- f2(elev: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >- rand(min: int, max: int): int</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
-ShabatElevAlgo476122052[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)ShabatElevAlgo</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >-   _direction: int [1]</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
-<TR><TD ALIGN="LEFT" >+ allocateAnElevator(c: CallForElevator): int</TD></TR>
-<TR><TD ALIGN="LEFT" >+ cmdElevator(elev: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >- rand(min: int, max: int): int</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-
 myElevatorAlgo476122052[
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)myElevatorAlgo</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >-   _building: Building [0..1]</TD></TR>
 <TR><TD ALIGN="LEFT" >-   _dataCalls: DataCalls [0..1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   cmdMatrix: int[][] [0..*]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   deltaFloor: double [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   epsTime: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   cmdMatrix: int[][] [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   deltaFloor: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   epsTime: double [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >- addOnlyIfNoDuplicates(idx: int, floorNum: int, eList: LinkedList&lt;Integer&gt;): boolean</TD></TR>
 <TR><TD ALIGN="LEFT" >+ algoName(): String</TD></TR>
@@ -215,9 +153,6 @@ myElevatorAlgo476122052[
 } 
 
 'edges    
-ElevatorAlgo476122052 -> ShabatElev2Algo476122052[arrowhead=none, arrowtail=empty, dir=both];
-ElevatorAlgo476122052 -> ShabatElev3Algo476122052[arrowhead=none, arrowtail=empty, dir=both];
-ElevatorAlgo476122052 -> ShabatElevAlgo476122052[arrowhead=none, arrowtail=empty, dir=both];
 ElevatorAlgo476122052 -> myElevatorAlgo476122052[arrowhead=none, arrowtail=empty, dir=both];
 myElevatorAlgo476122052 -> DataCalls476122052[label="_dataCalls
 [0..1]"];
