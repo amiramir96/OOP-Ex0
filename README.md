@@ -51,11 +51,24 @@ if we lose a small amount of time till the point of an epsilon parameter, but we
 we dont look on the present time as the END, we shall always improve our position for the next step!
  
  
-
-# little description for the implimention
+# little description for the implimention code for the algorithm
  the algorithm code is composed by two classes:
- 1- myElevatorAlgorithm which impliments ElevatorAlgo interface 
- 2- DataCalls class which built by arrayList of LinkedList and each of inner linked list at index i represent a route that the elevator i shall move through 
+ myElevatorAlgorithm which impliments ElevatorAlgo interface is the brain for all the Allocation phase but also the cmd - command elevator function is exist there
+ the allocation system  and adding is the most complex (and the main) challenge in the implemention, its works via the next steps:
+    a- for all the elevators which stand the criterions - check where we shall add the source and dest floors inside the route of the give elevator (linkedlist of integers)
+    
+    b- for ea elevator from ~a, calculate an accurate "timeToEndMission" and choose the elevator which holds the optimal time
+    
+    c- check from all the elevators from ~a, if there is elevator which can be suitable to "complicated case" and replace it with the optimal if exist
+    
+    d- now the allocateAnElevatorHelper function return to the origin allocateAnElevator function an array with 3 ints-> idx to add src, idx to add dest, ID num of elevator
+    then, add the items in the accurate place as needed.
+    
+ the addind system is simple from the moment there is index of where we shall add the items in the linked list, the "addOnlyIfNoDuplicates" do this task and ensure there wont be pair of floors with the same value that are linked.
+ 
+ DataCalls class which built by arrayList of LinkedList and each of inner linked list at index i represent a route that the elevator i shall move through 
+ 
+ command system - rely on the cmdElevator function, simple function which ensure that the computer will command to an elevator to move only if the elevator is in idle state so its will use goTo command. and if its move elevator so its shall use stop command. BUT use stop command only while the system didnt sent stop command on the same floor and task before (which make a double "stop" command.. waste of command xD)
  
  
  # navigation in the git Project
