@@ -21,17 +21,12 @@
  # prioritization system:
  every call will move through several stages:
 1- get the input of the call
-
 2- check if there is elevator which respond to the next terms:
      2.a - the elevator is in idle state or in a state that equal to the type of the call
      2.b - if the elevator is not in idle state, check if the call source floor wont make the elevator to change its direction
- 
 3- from all the elevators that respond to 2.a and 2.b, mark the elevator which his time is the best to complete the task in the earliest time
- 
 4- check from the given elevators above, if there is an elevator that respond to the terms of Complicated Call, if yes - mark it in place.
- 
 5- if we didnt find an optimal elevator yet, choose the elevator with the earliest time to complete the task
-
 6- allocate the task to the optimal elevator
  
  # complicated case
