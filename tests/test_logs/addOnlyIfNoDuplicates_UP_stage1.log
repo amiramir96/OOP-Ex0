@@ -1,0 +1,40 @@
+**** The Simulator log: stage 1
+0.0,OOP_Ex0_Elevator_Simulator
+0.0,Simulated Building, ex0.simulator.Builging_A [-2,10]
+0) ex0.simulator.Elevator_A, Elev_0, speed: 1.0, open/close: 2.0,  start/stop: 3.0
+0.0,Simulated Period starTime,0.0,  endTime,100.0,  dt,1.0
+0.0,Simulated  calls,Elevetor log, size: 6
+0.0,**** Simulation starts!! ****
+4.0,Elevator call,4.0,-1,2,1,0, got allocated to elevator, 0
+4.0, elevID,0,  pos,-2,  cmd, goto,-1
+10.0,Elevator call,10.0,2,4,1,0, got allocated to elevator, 0
+, elevID,0,  pos,-1,  WRONG cmd, stop,-1,  the elevator is not moving!
+14.0,Elevator call,14.0,-1,4,1,0, got allocated to elevator, 0
+, elevID,0,  pos,-1,  WRONG cmd, stop,-1,  the elevator is not moving!
+15.0,Elev,0,  arrived at src, -1, Elevator call,4.0,-1,2,2,0
+15.0,Elev,0,  arrived at src, -1, Elevator call,14.0,-1,4,2,0
+15.0, elevID,0,  pos,-1,  cmd, goto,2
+20.0,Elevator call,20.0,5,8,1,0, got allocated to elevator, 0
+22.0,Elevator call,22.0,5,6,1,0, got allocated to elevator, 0
+, elevID,0,  pos,2,  WRONG cmd, stop,2,  the elevator is not moving!
+24.0,Elevator call,24.0,6,8,1,0, got allocated to elevator, 0
+28.0,Elev,0,  arrived at dest, 2, this call is done!, Elevator call,4.0,-1,2,3,0, Done, dt, 24.0
+28.0,Elev,0,  arrived at src, 2, Elevator call,10.0,2,4,2,0
+28.0, elevID,0,  pos,2,  cmd, goto,4
+, elevID,0,  pos,4,  WRONG cmd, stop,4,  the elevator is not moving!
+40.0,Elev,0,  arrived at dest, 4, this call is done!, Elevator call,10.0,2,4,3,0, Done, dt, 30.0
+40.0,Elev,0,  arrived at dest, 4, this call is done!, Elevator call,14.0,-1,4,3,0, Done, dt, 26.0
+40.0, elevID,0,  pos,4,  cmd, goto,5
+, elevID,0,  pos,5,  WRONG cmd, stop,5,  the elevator is not moving!
+51.0,Elev,0,  arrived at src, 5, Elevator call,20.0,5,8,2,0
+51.0,Elev,0,  arrived at src, 5, Elevator call,22.0,5,6,2,0
+51.0, elevID,0,  pos,5,  cmd, goto,6
+, elevID,0,  pos,6,  WRONG cmd, stop,6,  the elevator is not moving!
+62.0,Elev,0,  arrived at dest, 6, this call is done!, Elevator call,22.0,5,6,3,0, Done, dt, 40.0
+62.0,Elev,0,  arrived at src, 6, Elevator call,24.0,6,8,2,0
+62.0, elevID,0,  pos,6,  cmd, goto,8
+, elevID,0,  pos,8,  WRONG cmd, stop,8,  the elevator is not moving!
+74.0,Elev,0,  arrived at dest, 8, this call is done!, Elevator call,20.0,5,8,3,0, Done, dt, 54.0
+74.0,Elev,0,  arrived at dest, 8, this call is done!, Elevator call,24.0,6,8,3,0, Done, dt, 50.0
+100.0,************* Simulation Ended ************
+Code Owners,316049311212458244,  Case,1,  Total waiting time: 224.0,  average waiting time per call: 37.333333333333336,  unCompleted calls,0,  certificate, -316049312289519860

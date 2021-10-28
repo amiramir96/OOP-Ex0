@@ -1,0 +1,15 @@
+**** The Simulator log: stage 1
+0.0,OOP_Ex0_Elevator_Simulator
+0.0,Simulated Building, ex0.simulator.Builging_A [-2,10]
+0) ex0.simulator.Elevator_A, Elev_0, speed: 1.0, open/close: 2.0,  start/stop: 3.0
+0.0,Simulated Period starTime,0.0,  endTime,100.0,  dt,1.0
+0.0,Simulated  calls,Elevetor log, size: 1
+0.0,**** Simulation starts!! ****
+4.0,Elevator call,3.088234751,-2,10,1,0, got allocated to elevator, 0
+4.0,Elev,0,  arrived at src, -2, Elevator call,3.088234751,-2,10,2,0
+, elevID,0,  pos,-2,  WRONG cmd, stop,-2,  the elevator is not moving!
+4.0, elevID,0,  pos,-2,  cmd, goto,10
+, elevID,0,  pos,10,  WRONG cmd, stop,10,  the elevator is not moving!
+26.0,Elev,0,  arrived at dest, 10, this call is done!, Elevator call,3.088234751,-2,10,3,0, Done, dt, 22.911765249
+100.0,************* Simulation Ended ************
+Code Owners,316049311212458244,  Case,1,  Total waiting time: 22.911765249,  average waiting time per call: 22.911765249,  unCompleted calls,0,  certificate, -316049311648663343

@@ -1,0 +1,31 @@
+**** The Simulator log: stage 1
+0.0,OOP_Ex0_Elevator_Simulator
+0.0,Simulated Building, ex0.simulator.Builging_A [-2,10]
+0) ex0.simulator.Elevator_A, Elev_0, speed: 1.0, open/close: 2.0,  start/stop: 3.0
+0.0,Simulated Period starTime,0.0,  endTime,100.0,  dt,1.0
+0.0,Simulated  calls,Elevetor log, size: 4
+0.0,**** Simulation starts!! ****
+3.0,Elevator call,2.088234751,7,3,1,0, got allocated to elevator, 0
+3.0, elevID,0,  pos,-2,  cmd, goto,7
+5.0,Elevator call,4.088234751,7,2,1,0, got allocated to elevator, 0
+6.0,Elevator call,5.23592412,7,4,1,0, got allocated to elevator, 0
+6.0,Elevator call,5.23592412,2,-2,1,0, got allocated to elevator, 0
+, elevID,0,  pos,7,  WRONG cmd, stop,7,  the elevator is not moving!
+22.0,Elev,0,  arrived at src, 7, Elevator call,2.088234751,7,3,2,0
+22.0,Elev,0,  arrived at src, 7, Elevator call,4.088234751,7,2,2,0
+22.0,Elev,0,  arrived at src, 7, Elevator call,5.23592412,7,4,2,0
+22.0, elevID,0,  pos,7,  cmd, goto,3
+, elevID,0,  pos,3,  WRONG cmd, stop,3,  the elevator is not moving!
+36.0,Elev,0,  arrived at dest, 3, this call is done!, Elevator call,2.088234751,7,3,3,0, Done, dt, 33.911765249
+36.0, elevID,0,  pos,3,  cmd, goto,4
+, elevID,0,  pos,4,  WRONG cmd, stop,4,  the elevator is not moving!
+47.0,Elev,0,  arrived at dest, 4, this call is done!, Elevator call,5.23592412,7,4,3,0, Done, dt, 41.76407588
+47.0, elevID,0,  pos,4,  cmd, goto,2
+, elevID,0,  pos,2,  WRONG cmd, stop,2,  the elevator is not moving!
+59.0,Elev,0,  arrived at dest, 2, this call is done!, Elevator call,4.088234751,7,2,3,0, Done, dt, 54.911765249
+59.0,Elev,0,  arrived at src, 2, Elevator call,5.23592412,2,-2,2,0
+59.0, elevID,0,  pos,2,  cmd, goto,-2
+, elevID,0,  pos,-2,  WRONG cmd, stop,-2,  the elevator is not moving!
+73.0,Elev,0,  arrived at dest, -2, this call is done!, Elevator call,5.23592412,2,-2,3,0, Done, dt, 67.76407588000001
+100.0,************* Simulation Ended ************
+Code Owners,316049311212458244,  Case,1,  Total waiting time: 198.351682258,  average waiting time per call: 49.5879205645,  unCompleted calls,0,  certificate, -316049312614093040
